@@ -1,0 +1,754 @@
+<title>由阿爾卑斯到永恆之城 · 16 日家庭之旅</title>
+<style>
+  :root {
+    /* ---- Palette: "Grand Tour rail" — Alpine dusk navy + Renaissance brass ---- */
+    --ground: #EFEBE1;
+    --surface: #FBF9F3;
+    --surface-2: #F5F1E7;
+    --ink: #16323F;
+    --ink-soft: #4E5D64;
+    --ink-faint: #7C878C;
+    --line: rgba(22,50,63,0.14);
+    --line-soft: rgba(22,50,63,0.08);
+    --brass: #9C6E1C;
+    --brass-strong: #7E5713;
+    --sienna: #A9522E;
+    --ch: #2E7D5B;
+    --shadow: 0 1px 2px rgba(22,50,63,.06), 0 8px 24px rgba(22,50,63,.08);
+    --shadow-lift: 0 2px 6px rgba(22,50,63,.10), 0 18px 44px rgba(22,50,63,.14);
+
+    --font-display: "Georgia", "Songti SC", "Songti TC", ui-serif, serif;
+    --font-body: system-ui, -apple-system, "PingFang HK", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+    --font-mono: "SF Mono", ui-monospace, "SFMono-Regular", Menlo, "Cascadia Mono", monospace;
+
+    --maxw: 780px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0E2530; --surface: #143039; --surface-2: #102A33;
+      --ink: #ECE4D4; --ink-soft: #AEBBBE; --ink-faint: #7B8B8F;
+      --line: rgba(236,228,212,0.16); --line-soft: rgba(236,228,212,0.09);
+      --brass: #D9B463; --brass-strong: #E6C77E; --sienna: #DB8A5F; --ch: #6DBF97;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px rgba(0,0,0,.35);
+      --shadow-lift: 0 2px 8px rgba(0,0,0,.4), 0 20px 50px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #EFEBE1; --surface: #FBF9F3; --surface-2: #F5F1E7;
+    --ink: #16323F; --ink-soft: #4E5D64; --ink-faint: #7C878C;
+    --line: rgba(22,50,63,0.14); --line-soft: rgba(22,50,63,0.08);
+    --brass: #9C6E1C; --brass-strong: #7E5713; --sienna: #A9522E; --ch: #2E7D5B;
+    --shadow: 0 1px 2px rgba(22,50,63,.06), 0 8px 24px rgba(22,50,63,.08);
+    --shadow-lift: 0 2px 6px rgba(22,50,63,.10), 0 18px 44px rgba(22,50,63,.14);
+  }
+  :root[data-theme="dark"] {
+    --ground: #0E2530; --surface: #143039; --surface-2: #102A33;
+    --ink: #ECE4D4; --ink-soft: #AEBBBE; --ink-faint: #7B8B8F;
+    --line: rgba(236,228,212,0.16); --line-soft: rgba(236,228,212,0.09);
+    --brass: #D9B463; --brass-strong: #E6C77E; --sienna: #DB8A5F; --ch: #6DBF97;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 28px rgba(0,0,0,.35);
+    --shadow-lift: 0 2px 8px rgba(0,0,0,.4), 0 20px 50px rgba(0,0,0,.45);
+  }
+
+  * { box-sizing: border-box; }
+
+  .trip {
+    background: var(--ground); color: var(--ink); font-family: var(--font-body);
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+    padding: 0 20px calc(64px + env(safe-area-inset-bottom)); overflow-x: hidden;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; }
+
+  /* Hero */
+  .hero { padding: 56px 0 36px; }
+  .eyebrow {
+    font-family: var(--font-mono); font-size: .72rem; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--brass); margin: 0 0 20px; font-weight: 600;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before { content:""; width: 26px; height: 1px; background: var(--brass); opacity:.7; }
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(2.3rem, 7.5vw, 4.1rem); line-height: 1.04;
+    letter-spacing: -0.01em; margin: 0; text-wrap: balance;
+  }
+  .hero .sub {
+    margin: 18px 0 0; font-size: clamp(1rem, 2.6vw, 1.18rem);
+    color: var(--ink-soft); max-width: 32ch;
+  }
+
+  /* Route rail */
+  .route { margin: 30px 0 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .route::-webkit-scrollbar { display: none; }
+  .route-inner { display: flex; align-items: center; width: max-content; padding: 6px 2px; }
+  .stop {
+    font-size: .9rem; font-weight: 600; white-space: nowrap; padding: 8px 13px;
+    border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
+    box-shadow: var(--shadow); color: var(--ink);
+  }
+  .stop .flag { margin-right: 5px; }
+  .stop.transit { color: var(--ink-soft); border-style: dashed; }
+  .stop.finale { border-color: var(--brass); color: var(--brass-strong); }
+  .hop {
+    flex: 0 0 auto; width: 20px; height: 2px; margin: 0 3px;
+    background: repeating-linear-gradient(90deg, var(--brass) 0 6px, transparent 6px 11px); opacity: .75;
+  }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 34px 0 0; }
+  .stat {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 12px; text-align: center; box-shadow: var(--shadow);
+  }
+  .stat .n { font-family: var(--font-mono); font-size: clamp(1.35rem, 5vw, 1.9rem); font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .stat .l { font-size: .74rem; color: var(--ink-faint); margin-top: 4px; letter-spacing: .04em; }
+  @media (max-width: 560px) { .stats { grid-template-columns: repeat(2,1fr); } }
+
+  /* Flights */
+  .flights {
+    margin-top: 14px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 16px; box-shadow: var(--shadow); overflow: hidden;
+  }
+  .fl-row { display: flex; align-items: center; gap: 14px; padding: 16px 18px; flex-wrap: wrap; }
+  .fl-row + .fl-row { border-top: 1px solid var(--line-soft); }
+  .fl-tag {
+    font-family: var(--font-mono); font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+    color: var(--brass); background: var(--surface-2); border: 1px solid var(--line-soft);
+    padding: 4px 9px; border-radius: 8px; white-space: nowrap;
+  }
+  .fl-main { display: flex; align-items: baseline; gap: 8px; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .fl-main .t { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+  .fl-main .ap { font-size: .82rem; color: var(--ink-soft); }
+  .fl-main .arw { color: var(--sienna); font-weight: 700; }
+  .fl-meta { margin-left: auto; text-align: right; font-size: .78rem; color: var(--ink-faint); line-height: 1.4; }
+  .fl-meta .direct { color: var(--ch); font-weight: 700; }
+  .fl-price {
+    padding: 11px 18px; background: var(--surface-2); border-top: 1px solid var(--line-soft);
+    font-size: .8rem; color: var(--ink-soft); display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px;
+  }
+  .fl-price b { font-family: var(--font-mono); color: var(--brass-strong); font-size: .95rem; }
+  @media (max-width: 480px) {
+    .fl-meta { margin-left: 0; text-align: left; width: 100%; }
+  }
+
+  /* Section headers */
+  .leg-head { margin: 54px 0 8px; }
+  .leg-head .kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
+  .leg-head h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 4.5vw, 2rem); margin: 8px 0 0; letter-spacing: -0.01em; }
+
+  /* Timeline */
+  .timeline { position: relative; margin-top: 26px; padding-left: 30px; }
+  .timeline::before { content:""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+  .item { position: relative; margin-bottom: 20px; }
+  .item::before {
+    content:""; position: absolute; left: -30px; top: 26px; width: 16px; height: 16px;
+    border-radius: 50%; background: var(--surface); border: 2px solid var(--brass); box-shadow: 0 0 0 4px var(--ground);
+  }
+  .item.move::before { border-color: var(--sienna); }
+  .item.finale::before { background: var(--brass); border-color: var(--brass); }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px 20px 18px; box-shadow: var(--shadow);
+    transition: transform .5s ease, opacity .5s ease, box-shadow .25s ease;
+  }
+  .card:hover { box-shadow: var(--shadow-lift); }
+  .card-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .day { font-family: var(--font-mono); font-weight: 700; font-size: .82rem; color: var(--brass); letter-spacing: .04em; }
+  .date { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .citytag { margin-left: auto; font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--sienna); }
+  .card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; margin: 12px 0 0; letter-spacing: -0.005em; text-wrap: balance; }
+
+  .transport {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 12px;
+    font-family: var(--font-mono); font-size: .8rem; color: var(--ink-soft);
+    background: var(--surface-2); border: 1px solid var(--line-soft); padding: 6px 11px; border-radius: 9px; max-width: 100%;
+  }
+  .transport .arw { color: var(--sienna); font-weight: 700; }
+
+  .acts { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 9px; }
+  .acts li { position: relative; padding-left: 20px; color: var(--ink-soft); font-size: .96rem; }
+  .acts li::before { content:""; position: absolute; left: 3px; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--brass); opacity: .8; }
+  .acts li b { color: var(--ink); font-weight: 600; }
+
+  .stay {
+    display: flex; align-items: center; gap: 8px; margin-top: 16px; font-size: .86rem;
+    color: var(--ink); font-weight: 600; padding-top: 14px; border-top: 1px solid var(--line-soft); width: 100%;
+  }
+  .stay .lbl { color: var(--ink-faint); font-weight: 500; font-family: var(--font-mono); font-size: .78rem; }
+  .stay .badge {
+    margin-left: auto; font-family: var(--font-mono); font-size: .74rem; color: var(--brass-strong);
+    background: var(--surface-2); border: 1px solid var(--line-soft); padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+  }
+
+  .highlight { border-color: color-mix(in srgb, var(--brass) 45%, var(--line)); }
+  .highlight .card { background: linear-gradient(180deg, var(--surface), var(--surface-2)); }
+  .pin {
+    display: inline-block; margin-top: 12px; font-size: .8rem; font-weight: 600; color: var(--brass-strong);
+    background: color-mix(in srgb, var(--brass) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--brass) 35%, transparent); padding: 5px 11px; border-radius: 8px;
+  }
+
+  /* Info: accommodation */
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+  @media (max-width: 620px) { .info-grid { grid-template-columns: 1fr; } }
+  .info-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 16px; box-shadow: var(--shadow); }
+  .info-card .ic-top { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .info-card h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; margin: 0; }
+  .info-card .nights { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft); background: var(--surface-2); border: 1px solid var(--line-soft); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .info-card .area { display: inline-block; margin-top: 10px; font-size: .82rem; font-weight: 700; color: var(--brass-strong); letter-spacing: .02em; }
+  .info-card p { margin: 6px 0 0; color: var(--ink-soft); font-size: .92rem; }
+  .info-card p b { color: var(--ink); font-weight: 600; }
+
+  /* Info: tips + table */
+  .tip { display: flex; gap: 12px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-top: 12px; box-shadow: var(--shadow); }
+  .tip .emo { font-size: 1.2rem; line-height: 1.4; flex: 0 0 auto; }
+  .tip .body { font-size: .94rem; color: var(--ink-soft); }
+  .tip .body strong { color: var(--ink); font-weight: 700; }
+  .tip .body .hl { color: var(--brass-strong); font-weight: 600; }
+  .table-wrap { overflow-x: auto; margin-top: 18px; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+  table.tt { width: 100%; border-collapse: collapse; font-size: .9rem; min-width: 500px; }
+  .tt th, .tt td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line-soft); }
+  .tt th { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); background: var(--surface-2); font-weight: 600; }
+  .tt td { color: var(--ink-soft); vertical-align: top; }
+  .tt td:first-child { color: var(--ink); font-weight: 600; white-space: nowrap; }
+  .tt .when { font-family: var(--font-mono); color: var(--brass-strong); white-space: nowrap; }
+  .tt tr:last-child td { border-bottom: none; }
+
+  .foot { margin-top: 60px; padding-top: 28px; border-top: 1px solid var(--line); text-align: center; color: var(--ink-faint); font-size: .84rem; }
+  .foot .brass { color: var(--brass); }
+
+  .reveal { opacity: 0; transform: translateY(14px); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .card { transition: box-shadow .25s ease; }
+  }
+</style>
+
+<div class="trip">
+  <div class="wrap">
+
+    <!-- HERO -->
+    <header class="hero">
+      <p class="eyebrow">家庭旅行 · 2027 · 瑞士 × 意大利</p>
+      <h1>由阿爾卑斯<br>到永恆之城</h1>
+      <p class="sub">馬特洪峰的雪、水都的運河、文藝復興的畫作 —— 一程 16 日的火車之旅，最後喺米蘭同《最後的晚餐》道別。</p>
+
+      <div class="route" aria-label="行程路線">
+        <div class="route-inner">
+          <span class="stop"><span class="flag">🇨🇭</span>蘇黎世</span><span class="hop"></span>
+          <span class="stop">琉森</span><span class="hop"></span>
+          <span class="stop">格林德瓦</span><span class="hop"></span>
+          <span class="stop transit">茵特拉肯 · 即日來回</span><span class="hop"></span>
+          <span class="stop">策馬特</span><span class="hop"></span>
+          <span class="stop"><span class="flag">🇮🇹</span>威尼斯</span><span class="hop"></span>
+          <span class="stop">佛羅倫斯</span><span class="hop"></span>
+          <span class="stop transit">比薩 · 即日來回</span><span class="hop"></span>
+          <span class="stop">羅馬</span><span class="hop"></span>
+          <span class="stop finale">米蘭 · 大結局</span><span class="hop"></span>
+          <span class="stop"><span class="flag">🇭🇰</span>香港</span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="n">16</div><div class="l">日行程</div></div>
+        <div class="stat"><div class="n">6</div><div class="l">間酒店</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">個國家</div></div>
+        <div class="stat"><div class="n">4.30<span style="opacity:.5">–</span>5.16</div><div class="l">出發 · 回程</div></div>
+      </div>
+
+      <!-- Flights -->
+      <div class="flights" aria-label="航班資料">
+        <div class="fl-row">
+          <span class="fl-tag">去程</span>
+          <div class="fl-main"><span class="t">00:25</span><span class="ap">HKG</span><span class="arw">→</span><span class="t">07:30</span><span class="ap">ZRH</span></div>
+          <div class="fl-meta"><div>4月30日 週五 · <span class="direct">直航</span></div><div>國泰／瑞士航空 · 13h 05m</div></div>
+        </div>
+        <div class="fl-row">
+          <span class="fl-tag">回程</span>
+          <div class="fl-main"><span class="t">12:45</span><span class="ap">MXP</span><span class="arw">→</span><span class="t">06:15<sup>+1</sup></span><span class="ap">HKG</span></div>
+          <div class="fl-meta"><div>5月15日 週六 · <span class="direct">直航</span></div><div>國泰航空 · 11h 30m</div></div>
+        </div>
+        <div class="fl-price"><span>經濟艙 · 來回參考票價</span><b>HK$8,630 / 位</b></div>
+      </div>
+    </header>
+
+    <!-- ============ SWISS LEG ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">Day 1 – 6 · 4月30日 – 5月5日</div>
+        <h2>🇨🇭 瑞士段 · 夢幻山城深度遊</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 1</span><span class="date">4月30日 · 週五</span><span class="citytag">抵達 → 格林德瓦</span></div>
+            <h3>落機即出發 ➔ 琉森快閃</h3>
+            <div class="transport"><span>🚄</span> 蘇黎世 <span class="arw">→</span> 琉森 <span class="arw">→</span> 格林德瓦</div>
+            <ul class="acts">
+              <li>凌晨航班 00:25 由香港出發，早上 <b>7:30 抵達蘇黎世</b></li>
+              <li>坐火車去<b>琉森</b>（行李鎖火車站），行卡貝爾橋</li>
+              <li>下晝經<b>茵特拉肯</b>轉車，黃昏抵<b>格林德瓦</b> check-in</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 格林德瓦 <span class="badge">第 1 晚</span></div>
+          </div>
+        </div>
+
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 2</span><span class="date">5月1日 · 週六</span><span class="citytag">格林德瓦</span></div>
+            <h3>First 冒險 🪂</h3>
+            <ul class="acts">
+              <li>朝早搭纜車上 <b>Grindelwald First</b></li>
+              <li>玩<b>飛索 (First Flyer)</b> 同<b>懸崖步道 (Cliff Walk)</b></li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 格林德瓦 <span class="badge">第 2 晚</span></div>
+          </div>
+        </div>
+
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 3</span><span class="date">5月2日 · 週日</span><span class="citytag">格林德瓦</span></div>
+            <h3>登頂少女峰 🏔️</h3>
+            <ul class="acts">
+              <li>登頂<b>少女峰 (Jungfraujoch)</b>，睇<b>阿萊奇冰川</b></li>
+              <li>親身體驗「歐洲之巔」</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 格林德瓦 <span class="badge">第 3 晚 · 3日3夜 🌟</span></div>
+          </div>
+        </div>
+
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 4</span><span class="date">5月3日 · 週一</span><span class="citytag">格林德瓦 → 策馬特</span></div>
+            <h3>茵特拉肯快閃 ➔ Spiez 湖畔 ➔ 策馬特</h3>
+            <div class="transport"><span>🚄</span> 格林德瓦 <span class="arw">→</span> 茵特拉肯 <span class="arw">→</span> Spiez <span class="arw">→</span> 策馬特</div>
+            <ul class="acts">
+              <li>退房，火車到<b>茵特拉肯</b>（約 35 分鐘），行李寄存，沿 Höhematte 草坪同舊城<b>即日來回</b>散步幾個鐘</li>
+              <li>轉車去 <b>Spiez</b>，行落湖邊城堡食 lunch</li>
+              <li>下午入<b>策馬特</b>，睇馬特洪峰金頂日落</li>
+            </ul>
+            <div class="pin">🚉 呢日拉車較多，但三段都係短途火車，一路順住去、無回頭路</div>
+            <div class="stay"><span class="lbl">宿</span> 策馬特 <span class="badge">第 1 晚</span></div>
+          </div>
+        </div>
+
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 5</span><span class="date">5月4日 · 週二</span><span class="citytag">策馬特</span></div>
+            <h3>朝聖馬特洪峰 📐</h3>
+            <ul class="acts">
+              <li>搭 <b>Gornergrat 齒軌火車</b>上山</li>
+              <li>同「三角朱古力神山」影合照、健行</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 策馬特 <span class="badge">第 2 晚</span></div>
+          </div>
+        </div>
+
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 6</span><span class="date">5月5日 · 週三</span><span class="citytag">策馬特</span></div>
+            <h3>Sunnegga · 五湖健行 🥾</h3>
+            <ul class="acts">
+              <li>搭 <b>Sunnegga 地底纜車</b>上山，路線平緩啱一家大細</li>
+              <li>健行 <b>Fünfseenweg（五湖步道）</b>，Stellisee 湖面倒影馬特洪峰係經典打卡位</li>
+              <li>時間夠可以落村歎個悠閒下午茶，為翌日長途拉車儲定體力</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 策馬特 <span class="badge">第 3 晚 · 3日3夜 🌟</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ITALY LEG ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">Day 7 – 17 · 5月6日 – 5月16日</div>
+        <h2>🇮🇹 意大利段 · 水都、文藝與古羅馬</h2>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Day 7 — Zermatt to Venice via Milan (transit, no overnight) -->
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 7</span><span class="date">5月6日 · 週四</span><span class="citytag">策馬特 → 威尼斯</span></div>
+            <h3>跨國拉車日：經米蘭轉車入水都</h3>
+            <div class="transport"><span>🚄</span> 策馬特 <span class="arw">→</span> Visp <span class="arw">→</span> 米蘭 <span class="arw">→</span> 威尼斯 · 全程約 6–7 小時</div>
+            <ul class="acts">
+              <li>策馬特退房，火車去 <b>Visp（菲斯普）</b>（約 1h），轉 <b>EuroCity (EC)</b> 直達<b>米蘭中央站</b>（經辛普朗隧道，約 3h）</li>
+              <li>米蘭站內轉車（毋須出站過夜），轉 <b>Frecciarossa</b> 高鐵去<b>威尼斯</b>（約 2.5h）</li>
+              <li>傍晚到威尼斯 check-in，沿運河邊散步</li>
+            </ul>
+            <div class="pin">🚄 全日拉車，慳返一晚米蘭酒店；記得買定小食同野飲，兩程之間預留轉車時間</div>
+            <div class="stay"><span class="lbl">宿</span> 威尼斯 <span class="badge">第 1 晚</span></div>
+          </div>
+        </div>
+
+        <!-- Day 8 — Venice full day -->
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 8</span><span class="date">5月7日 · 週五</span><span class="citytag">威尼斯</span></div>
+            <h3>水鄉一日遊 🚤</h3>
+            <ul class="acts">
+              <li>參觀<b>聖馬可大教堂</b>同<b>總督宮 (Doge's Palace)</b></li>
+              <li>坐<b>貢多拉</b>穿梭小運河</li>
+              <li>黃昏喺<b>聖馬可廣場</b>散步，睇水都日落</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 威尼斯 <span class="badge">第 2 晚 · 2日2夜 🌟</span></div>
+          </div>
+        </div>
+
+        <!-- Day 9 — Venice to Florence -->
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 9</span><span class="date">5月8日 · 週六</span><span class="citytag">威尼斯 → 佛羅倫斯</span></div>
+            <h3>文藝復興初見</h3>
+            <div class="transport"><span>🚄</span> 威尼斯 <span class="arw">→</span> 佛羅倫斯 · 高鐵約 2 小時</div>
+            <ul class="acts">
+              <li>朝早退房，搭高鐵去<b>佛羅倫斯</b></li>
+              <li>睇<b>百花聖母大教堂 (Duomo)</b>、喬托鐘樓，同<b>老橋 (Ponte Vecchio)</b></li>
+              <li>黃昏上<b>米開朗基羅廣場</b>，全城紅瓦屋頂日落盡收眼底</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 佛羅倫斯 <span class="badge">第 1 晚</span></div>
+          </div>
+        </div>
+
+        <!-- Day 10 — Accademia (David) + Florence deep dive -->
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 10</span><span class="date">5月9日 · 週日</span><span class="citytag">佛羅倫斯</span></div>
+            <h3>大衛像朝聖 · 文藝復興深度遊 🎨</h3>
+            <ul class="acts">
+              <li>早上參觀 <b>Galleria dell'Accademia</b>，睇米高安哲羅《<b>大衛像</b>》真跡</li>
+              <li>行 <b>Piazza della Signoria</b>，睇 Uffizi 外觀（時間夠可加場內部）</li>
+              <li>逛<b>中央市場 (Mercato Centrale)</b> 或聖十字教堂，歎個托斯卡尼美食</li>
+            </ul>
+            <div class="pin">🎟️ Accademia（大衛像）網上預約提早幾星期搶飛，避免落空</div>
+            <div class="stay"><span class="lbl">宿</span> 佛羅倫斯 <span class="badge">第 2 晚 · 2日2夜 🌟</span></div>
+          </div>
+        </div>
+
+        <!-- Day 11 — Pisa day trip + move to Rome -->
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 11</span><span class="date">5月10日 · 週一</span><span class="citytag">佛羅倫斯 ⇄ 比薩 → 羅馬</span></div>
+            <h3>比薩斜塔快閃，再落羅馬 🗼</h3>
+            <div class="transport"><span>🚄</span> 佛羅倫斯 <span class="arw">⇄</span> 比薩（各約 1h）+ 佛羅倫斯 <span class="arw">→</span> 羅馬（約 1.5h）</div>
+            <ul class="acts">
+              <li>早班區域火車去<b>比薩</b>（約 1h，毋須預訂），行<b>奇跡廣場 (Piazza dei Miracoli)</b>：斜塔、主教座堂、洗禮堂</li>
+              <li>影經典「用手托住斜塔」打卡相</li>
+              <li>中午搭車返佛羅倫斯，食個午飯，輕鬆行下 Piazza della Signoria／老橋一帶</li>
+              <li>傍晚搭高鐵去<b>羅馬</b> check-in</li>
+            </ul>
+            <div class="pin">🎟️ 比薩斜塔要提早網上訂爬塔時段（每 40 分鐘一場，人流管制）· 呢日兩程短途火車＋一程長途，係全程最忙一日</div>
+            <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 1 晚</span></div>
+          </div>
+        </div>
+
+        <!-- Day 12 -->
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 12</span><span class="date">5月11日 · 週二</span><span class="citytag">羅馬</span></div>
+            <h3>震撼古城 🏟️</h3>
+            <ul class="acts">
+              <li>全日參觀<b>鬥獸場</b>同<b>古羅馬廣場</b></li>
+              <li>專心留畀古羅馬歷史遺跡，慢慢影相</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 2 晚</span></div>
+          </div>
+        </div>
+
+        <!-- Day 13 -->
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 13</span><span class="date">5月12日 · 週三</span><span class="citytag">羅馬</span></div>
+            <h3>梵蒂岡與美食探索</h3>
+            <ul class="acts">
+              <li>朝早參觀<b>梵蒂岡博物館</b>、<b>西斯汀小堂</b>及<b>聖伯多祿大殿</b></li>
+              <li>下晝去 <b>Trastevere</b>（特拉斯提弗列）區，隱世小店同地道羅馬菜</li>
+              <li>夜晚食餐正宗 <b>Carbonara</b>（卡邦尼意粉）</li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 3 晚 · 3日3夜 🌟</span></div>
+          </div>
+        </div>
+
+        <!-- Day 14 -->
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 14</span><span class="date">5月13日 · 週四</span><span class="citytag">羅馬 → 米蘭</span></div>
+            <h3>北上米蘭 · 大結局開始</h3>
+            <div class="transport"><span>🚄</span> 羅馬 <span class="arw">→</span> 米蘭 · 高鐵約 3 小時</div>
+            <ul class="acts">
+              <li>朝早搭高鐵直上<b>米蘭</b></li>
+              <li>下午參觀<b>米蘭大教堂</b>同<b>艾曼紐二世迴廊</b></li>
+            </ul>
+            <div class="stay"><span class="lbl">宿</span> 米蘭 <span class="badge">第 1 晚</span></div>
+          </div>
+        </div>
+
+        <!-- Day 15 -->
+        <div class="item finale highlight reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 15</span><span class="date">5月14日 · 週五</span><span class="citytag">米蘭 · 大結局</span></div>
+            <h3>《最後的晚餐》🎨</h3>
+            <ul class="acts">
+              <li>參觀達文西<b>《最後的晚餐》</b>真跡</li>
+              <li>下晝行米蘭設計區、高級家電 showroom，或者做最後手信衝刺</li>
+            </ul>
+            <div class="pin">🎟️ 《最後的晚餐》記得提早幾星期搶飛</div>
+            <div class="stay"><span class="lbl">宿</span> 米蘭 <span class="badge">第 2 晚 · 3日2夜 🌟</span></div>
+          </div>
+        </div>
+
+        <!-- Day 16 -->
+        <div class="item move reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 16</span><span class="date">5月15日 · 週六</span><span class="citytag">米蘭 → 香港</span></div>
+            <h3>啟程回家 ✈️</h3>
+            <div class="transport"><span>✈️</span> 米蘭 MXP 12:45 <span class="arw">→</span> 香港 · 直航 11h 30m</div>
+            <ul class="acts">
+              <li>上午由酒店去 <b>Malpensa 機場 (MXP)</b></li>
+              <li>中午 12:45 乘國泰直航離開，帶住滿滿嘅戰利品回家</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Day 17 -->
+        <div class="item reveal">
+          <div class="card">
+            <div class="card-top"><span class="day">DAY 17</span><span class="date">5月16日 · 週日</span><span class="citytag">🇭🇰 香港</span></div>
+            <h3>安全到家</h3>
+            <ul class="acts">
+              <li>清晨 <b>6:15 抵達香港</b>，旅程圓滿結束 🏡</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ ACCOMMODATION ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">實用資訊 · 住宿</div>
+        <h2>🏨 各城市住邊區好</h2>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card reveal">
+          <div class="ic-top"><h4>格林德瓦 Grindelwald</h4><span class="nights">3 晚</span></div>
+          <span class="area">📍 村中心 / 近火車站 · Grund 纜車站</span>
+          <p>望到<b>艾格峰</b>嘅位最正。一家人啱租 <b>chalet／apartment</b>（有廚房，慳飯錢又舒服）。退房嗰日去<b>茵特拉肯即日來回</b>，行李記得寄存喺車站。</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="ic-top"><h4>策馬特 Zermatt</h4><span class="nights">3 晚</span></div>
+          <span class="area">📍 Bahnhofstrasse 主街 / 近 Gornergrat 車站</span>
+          <p>無車小鎮，行路搞掂。加少少錢揀<b>「馬特洪峰景」房</b>，朝早開窗睇金頂日出。</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="ic-top"><h4>威尼斯 Venice</h4><span class="nights">2 晚</span></div>
+          <span class="area">📍 Cannaregio 區（近 Santa Lucia 車站）</span>
+          <p>住<b>本島</b>先有水都感覺。Cannaregio 較靜又抵住；想行到聖馬可就揀 San Marco（貴啲）。<b>避免住 Mestre</b>（要過橋出島）。</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="ic-top"><h4>佛羅倫斯 Florence</h4><span class="nights">2 晚</span></div>
+          <span class="area">📍 SMN 火車站 ↔ Duomo 之間</span>
+          <p>市中心細，全程行路。第二日去 Accademia 睇大衛像，第三朝仲要去<b>比薩即日來回</b>再落羅馬，住呢頭最方便。</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="ic-top"><h4>羅馬 Rome</h4><span class="nights">3 晚</span></div>
+          <span class="area">📍 Monti 區 / 近 Termini 中央站</span>
+          <p><b>Monti</b> 喺鬥獸場旁、有格調又近地鐵；貪交通方便可揀近 <b>Termini</b>；想近梵蒂岡就揀 <b>Prati</b>。</p>
+        </div>
+
+        <div class="info-card reveal">
+          <div class="ic-top"><h4>米蘭 · 大結局</h4><span class="nights">2 晚</span></div>
+          <span class="area">📍 Duomo / 市中心</span>
+          <p>行到大教堂、Galleria；<b>《最後的晚餐》</b>喺 Cadorna 附近。去機場搭 <b>Malpensa Express</b>（Centrale／Cadorna 開出）。</p>
+        </div>
+      </div>
+
+      <div class="tip reveal" style="margin-top:14px">
+        <span class="emo">🧳</span>
+        <div class="body"><strong>兩個「即日來回」位（茵特拉肯、佛羅倫斯）都唔使搬酒店。</strong> 出發嗰個火車站有<span class="hl">行李寄存 / 儲物櫃</span>，寄低大件行李輕裝上路就得。</div>
+      </div>
+    </section>
+
+    <!-- ============ TRAIN TICKETS ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">實用資訊 · 交通</div>
+        <h2>🎫 火車購票攻略</h2>
+      </div>
+
+      <div class="reveal">
+        <div class="tip">
+          <span class="emo">🇨🇭</span>
+          <div class="body"><strong>瑞士段：計一計 Swiss Travel Pass 抵唔抵。</strong> 連續 6／8 日 pass 包晒火車、巴士、遊船，好多博物館免費入；上少女峰、Gornergrat 呢類登山鐵路<span class="hl">有折（唔係全免）</span>。你瑞士段密食火車＋兩個大 excursion，好大機會抵過逐程買。另一選擇係 <strong>Half Fare Card 半價卡</strong>，所有嘢半價。買前用 SBB 官網逐程加埋比較。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">🏔️</span>
+          <div class="body"><strong>兩個登山大位要早訂：</strong> 少女峰 (Jungfraujoch) 同 Gornergrat 票價貴、旺季有人流管制，<span class="hl">連 pass 折扣一齊喺官網預約時段</span>最穩陣。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">🇮🇹</span>
+          <div class="body"><strong>意大利高鐵：愈早訂愈平。</strong> 米蘭→威尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭，連跨國 EC 共<span class="hl">五程要訂</span>，車飛約<span class="hl">出發前 3–4 個月開賣</span>。最平嘅 Super Economy／Economy 會被搶（可平至 €19–29，臨買隨時 €70–90），但綁定車次、不設改退。<strong>Trenitalia 同 Italo</strong> 兩間格價。佛羅倫斯⇄比薩就係普通區域車，<span class="hl">毋須預訂</span>，現場買、上車前打卡就得。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">🎟️</span>
+          <div class="body"><strong>景點門票一樣要搶：</strong> <span class="hl">《最後的晚餐》最誇張，成個月前爆</span>；梵蒂岡博物館、鬥獸場、<b>比薩斜塔爬塔</b>都要網上預約時段飛。</div>
+        </div>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table class="tt">
+          <thead>
+            <tr><th>路段</th><th>幾時訂</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>少女峰 Jungfraujoch</td><td class="when">預約時段</td><td>連 Swiss Pass / 半價卡折扣，官網揀時段</td></tr>
+            <tr><td>Gornergrat 齒軌</td><td class="when">旺季早買</td><td>持 pass 有折；可現場但五月人多</td></tr>
+            <tr><td>Visp → 米蘭（EC 跨國）</td><td class="when">3–4 個月前</td><td>經辛普朗隧道；Domodossola–米蘭段需訂位</td></tr>
+            <tr><td>米蘭 → 威尼斯</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 2.5h</td></tr>
+            <tr><td>威尼斯 → 佛羅倫斯</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 2h</td></tr>
+            <tr><td>佛羅倫斯 ⇄ 比薩（即日來回）</td><td class="when">毋須預訂</td><td>區域車，各約 1h，現場買飛即可</td></tr>
+            <tr><td>佛羅倫斯 → 羅馬</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 1.5h</td></tr>
+            <tr><td>羅馬 → 米蘭</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 3h</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip reveal" style="margin-top:12px">
+        <span class="emo">🚉</span>
+        <div class="body">市內短程同區域車（去 Spiez、Interlaken ↔ Grindelwald、佛羅倫斯 ↔ 比薩、機場快線等）<span class="hl">唔使預訂</span>，準時上車即可。</div>
+      </div>
+    </section>
+
+    <!-- ============ PACKING & WEATHER ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">實用資訊 · 打包</div>
+        <h2>🎒 天氣 & 打包貼士</h2>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table class="tt">
+          <thead>
+            <tr><th>地區</th><th>時期</th><th>日間氣溫</th><th>重點</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>瑞士山區<br>策馬特 · 格林德瓦</td><td class="when">4 月尾–5 月頭</td><td>山下 8–15°C<br>山上 −5 至 5°C</td><td>山上仲有雪，早晚凍</td></tr>
+            <tr><td>意大利<br>威尼斯 · 佛 · 羅馬</td><td class="when">5 月</td><td>18–25°C</td><td>和暖乾爽，早晚涼少少</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="reveal">
+        <div class="tip">
+          <span class="emo">🧥</span>
+          <div class="body"><strong>洋蔥式穿搭係關鍵。</strong> 一日之內由山上雪地去到山下暖陽 —— 保暖底層＋薄羽絨＋<span class="hl">防風防水外套</span>；上少女峰／Gornergrat 記得帶手套、冷帽、頸巾。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">🥾</span>
+          <div class="body"><strong>兩對鞋。</strong> 一對防滑<span class="hl">行山鞋</span>（雪地／山徑），一對舒服波鞋（羅馬石春路行足日）。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">🕶️</span>
+          <div class="body"><strong>雪地反光好勁。</strong> 太陽鏡＋高系數防曬，山上都會曬傷。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">⛪</span>
+          <div class="body"><strong>意大利教堂有 dress code。</strong> 入梵蒂岡、聖伯多祿大殿等要<span class="hl">遮膊頭同膝頭</span>，帶條絲巾／薄長褲傍身。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">🔌</span>
+          <div class="body"><strong>插頭要帶啱。</strong> 瑞士 Type J、意大利 Type L／F／C，帶個<span class="hl">萬能轉插＋拖板</span>一次過搞掂全家電子產品。</div>
+        </div>
+        <div class="tip">
+          <span class="emo">💧</span>
+          <div class="body"><strong>雜項。</strong> 自備水樽（歐洲多數水喉水可飲）、細背囊、常用藥，同少少<span class="hl">現金</span>畀小店同公廁。</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BUDGET ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">實用資訊 · 預算</div>
+        <h2>💰 每日大概預算</h2>
+      </div>
+
+      <div class="tip reveal">
+        <span class="emo">ℹ️</span>
+        <div class="body">以下係<strong>粗略參考</strong>（每人、中檔），方便同屋企人夾個概念。實際受匯率、淡旺季、住宿檔次影響好大。</div>
+      </div>
+
+      <div class="table-wrap reveal">
+        <table class="tt">
+          <thead>
+            <tr><th>項目（每人 / 日）</th><th>🇨🇭 瑞士</th><th>🇮🇹 意大利</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>住宿（家庭房攤分）</td><td>CHF 80–150</td><td>€40–90</td></tr>
+            <tr><td>三餐</td><td>CHF 50–80</td><td>€30–50</td></tr>
+            <tr><td>市內 / 區域交通</td><td>CHF 10–25</td><td>€5–15</td></tr>
+            <tr><td>景點 / 活動</td><td>CHF 20–60</td><td>€15–30</td></tr>
+            <tr><td>每人每日約</td><td class="when">HK$1,300–2,200</td><td class="when">HK$800–1,400</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="reveal">
+        <div class="tip">
+          <span class="emo">💳</span>
+          <div class="body"><strong>大額一次性（每人，參考）：</strong><br>
+            · 來回機票 <span class="hl">HK$8,630</span>（已定）<br>
+            · Swiss Travel Pass／半價卡 ~HK$1,500–2,800<br>
+            · 登山飛（少女峰＋Gornergrat）~HK$1,800–2,800<br>
+            · 意大利高鐵（米蘭→威尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭）~HK$900–1,700<br>
+            · 佛羅倫斯⇄比薩區域車（來回）~HK$150–250<br>
+            · 策馬特→威尼斯跨國車（經 Visp／米蘭）~HK$500–900<br>
+            · 景點門票（最後晚餐／梵蒂岡／鬥獸場／比薩斜塔等）~HK$850–1,300
+          </div>
+        </div>
+        <div class="tip">
+          <span class="emo">🧮</span>
+          <div class="body"><strong>連機票每人粗略總數：</strong> <span class="hl">約 HK$32,000–45,000</span>（未計購物，視乎住宿檔次）。乘返人數就係一家人嘅大概總預算。</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>由阿爾卑斯到永恆之城 · <span class="brass">16 日家庭之旅</span></p>
+      <p style="margin-top:6px; font-family:var(--font-mono); font-size:.76rem;">2027 · 4月30日 – 5月16日 · 瑞士 → 意大利 → 香港</p>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  (function () {
+    var items = document.querySelectorAll('.reveal');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
