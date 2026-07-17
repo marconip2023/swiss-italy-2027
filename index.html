@@ -132,6 +132,36 @@
     .fl-meta { margin-left: 0; text-align: left; width: 100%; }
   }
 
+  /* Fare compare tabs */
+  .fare-compare {
+    margin-top: 14px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 16px; box-shadow: var(--shadow); overflow: hidden;
+  }
+  .fare-tabs { display: flex; }
+  .fare-tab-btn {
+    flex: 1; padding: 12px 10px; font-family: var(--font-mono); font-size: .74rem; font-weight: 700;
+    letter-spacing: .06em; text-transform: uppercase; background: var(--surface-2); color: var(--ink-soft);
+    border: none; border-bottom: 1px solid var(--line-soft); cursor: pointer; transition: background .2s, color .2s;
+  }
+  .fare-tab-btn.active { background: var(--surface); color: var(--brass-strong); border-bottom-color: var(--surface); }
+  .fare-tab-btn:not(.active):hover { color: var(--ink); }
+  .fare-panel { padding: 16px 18px; display: none; }
+  .fare-panel.active { display: block; }
+  .fare-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+    padding: 8px 0; border-bottom: 1px dashed var(--line-soft); font-size: .88rem; color: var(--ink-soft);
+  }
+  .fare-row b { font-family: var(--font-mono); color: var(--ink); font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .fare-total {
+    margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line-soft);
+    display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px;
+  }
+  .fare-total .lbl { font-size: .82rem; color: var(--ink-faint); font-weight: 600; }
+  .fare-total .amt { font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: var(--brass-strong); }
+  .fare-note { font-size: .78rem; color: var(--ink-faint); line-height: 1.55; }
+  .fare-note.uplift { margin-top: 10px; }
+  .fare-note.shared { padding: 12px 18px; border-top: 1px solid var(--line-soft); }
+
   /* Section headers */
   .leg-head { margin: 54px 0 8px; }
   .leg-head .kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); font-weight: 600; }
@@ -272,6 +302,26 @@
           <div class="fl-meta"><div>7月3日 週六</div><div>航班未訂，出發前重新搜尋</div></div>
         </div>
         <div class="fl-price"><span>經濟艙 · 票價</span><b>未訂 · 待查</b></div>
+      </div>
+
+      <!-- Fare comparison: Economy vs Premium Economy -->
+      <div class="fare-compare" aria-label="艙等票價比較">
+        <div class="fare-tabs">
+          <button class="fare-tab-btn active" data-fare-tab="econ" type="button">經濟艙</button>
+          <button class="fare-tab-btn" data-fare-tab="prem" type="button">特選經濟艙</button>
+        </div>
+        <div class="fare-panel active" data-fare-panel="econ">
+          <div class="fare-row"><span>去程 HKG → ZRH</span><b>HK$3,800–5,200</b></div>
+          <div class="fare-row"><span>回程 MXP → HKG</span><b>HK$4,200–5,800</b></div>
+          <div class="fare-total"><span class="lbl">來回總數 / 位</span><span class="amt">HK$8,000–10,500</span></div>
+        </div>
+        <div class="fare-panel" data-fare-panel="prem">
+          <div class="fare-row"><span>去程 HKG → ZRH</span><b>HK$7,500–9,500</b></div>
+          <div class="fare-row"><span>回程 MXP → HKG</span><b>HK$8,200–10,500</b></div>
+          <div class="fare-total"><span class="lbl">來回總數 / 位</span><span class="amt">HK$16,000–20,000</span></div>
+          <div class="fare-note uplift">比經濟艙貴大約 <b style="color:var(--brass-strong)">HK$8,000–10,000</b> / 位（加幅接近一倍），換嚟多腳位、獨立耳機插座、優先登機。</div>
+        </div>
+        <div class="fare-note shared">⚠️ 6–7月係歐洲旅遊旺季，票價會貴過我哋原先 4/5月嘅參考（HK$8,630）；呢啲亦係現時（2026年）同季節航線嘅參考價，2027年6月實際票價未開賣（一般提前11–12個月），出發前直接上 cathaypacific.com 查啱嗰日實際價錢。</div>
       </div>
     </header>
 
@@ -724,7 +774,7 @@
         <div class="tip">
           <span class="emo">💳</span>
           <div class="body"><strong>大額一次性（每人，參考）：</strong><br>
-            · 來回機票 <span class="hl">待查</span>（未訂，新日期需重新搜尋）<br>
+            · 來回機票 <span class="hl">經濟 HK$8,000–10,500 ／ 特選經濟 HK$16,000–20,000</span>（現時參考價，未訂）<br>
             · Swiss Travel Pass／半價卡 ~HK$1,500–2,800<br>
             · 登山飛（少女峰＋Gornergrat）~HK$1,800–2,800<br>
             · 意大利高鐵（米蘭→威尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭）~HK$900–1,700<br>
@@ -735,7 +785,7 @@
         </div>
         <div class="tip">
           <span class="emo">🧮</span>
-          <div class="body"><strong>連機票每人粗略總數（未計機票）：</strong> <span class="hl">約 HK$23,000–37,000</span>（未計購物，視乎住宿檔次）。機票未訂，查到價錢後加返上去就係總預算。</div>
+          <div class="body"><strong>連機票每人粗略總數：</strong> <span class="hl">經濟艙約 HK$31,000–47,500</span> ／ <span class="hl">特選經濟約 HK$39,000–57,000</span>（未計購物，視乎住宿檔次）。機票用現時參考價估算，實際以出發前查到嘅價錢為準。</div>
         </div>
       </div>
     </section>
@@ -749,6 +799,19 @@
 </div>
 
 <script>
+  (function () {
+    var fareBtns = document.querySelectorAll('.fare-tab-btn');
+    fareBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        fareBtns.forEach(function (b) { b.classList.remove('active'); });
+        document.querySelectorAll('.fare-panel').forEach(function (p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        var panel = document.querySelector('.fare-panel[data-fare-panel="' + btn.dataset.fareTab + '"]');
+        if (panel) panel.classList.add('active');
+      });
+    });
+  })();
+
   (function () {
     var items = document.querySelectorAll('.reveal');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
