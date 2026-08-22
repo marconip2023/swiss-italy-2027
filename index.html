@@ -188,6 +188,17 @@
     padding: 20px 20px 18px; box-shadow: var(--shadow);
     transition: transform .5s ease, opacity .5s ease, box-shadow .25s ease;
   }
+  .card { overflow: hidden; padding: 0; }
+  .card > .card-top, .card > h3, .card > .transport, .card > .acts,
+  .card > .pin, .card > .stay { margin-left: 20px; margin-right: 20px; }
+  .card > .card-top { margin-top: 20px; }
+  .card > .stay { margin-bottom: 18px; }
+  .dayphoto { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover;
+    background: var(--surface-2); border-bottom: 1px solid var(--line-soft); }
+  @media (max-width: 640px) { .dayphoto { aspect-ratio: 3/2; } }
+  .dayphoto.tall { object-position: center top; }
+  .photo-credit { font-family: var(--font-mono); font-size: .62rem; color: var(--ink-faint);
+    margin: 6px 20px -4px; letter-spacing: .02em; }
   .card:hover { box-shadow: var(--shadow-lift); }
   .card-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .day { font-family: var(--font-mono); font-weight: 700; font-size: .82rem; color: var(--brass); letter-spacing: .04em; }
@@ -309,6 +320,7 @@
 
         <div class="item move reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day01.jpg" alt="琉森 卡貝爾橋" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 1</span><span class="date">6月11日 · 週五</span><span class="citytag">抵達 → 格林德瓦</span></div>
             <h3>抵達即出發 ➔ 琉森快閃</h3>
             <div class="transport"><span>🚄</span> 蘇黎世 <span class="arw">→</span> 琉森 <span class="arw">→</span> 格林德瓦</div>
@@ -323,6 +335,7 @@
 
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day02.jpg" alt="少女峰" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 2</span><span class="date">6月12日 · 週六</span><span class="citytag">格林德瓦</span></div>
             <h3>少女峰朝聖 ➔ 健行落 Wengen 🏔️🥾</h3>
             <div class="transport"><span>🚄🥾</span> 格林德瓦 <span class="arw">→</span> 少女峰 Jungfraujoch <span class="arw">→</span> Kleine Scheidegg <span class="arw">健行→</span> Wengen <span class="arw">→</span> 格林德瓦</div>
@@ -340,13 +353,15 @@
 
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day03.jpg" alt="Iseltwald 布里恩茨湖" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 3</span><span class="date">6月13日 · 週日</span><span class="citytag">格林德瓦</span></div>
             <h3>First 分組玩 ➔ Iseltwald 愛的迫降碼頭 🛴🚤</h3>
             <div class="transport"><span>🚠</span> 格林德瓦 <span class="arw">→</span> First <span class="arw">→</span> 茵特拉肯 <span class="arw">→</span> Iseltwald <span class="arw">→</span> 格林德瓦</div>
             <ul class="acts">
               <li>朝早上 <b>Grindelwald First</b>：爸媽、姨姨姨丈睇景、行 <b>Cliff Walk 懸崖步道</b>，你、老婆就玩 <b>Trottibike</b>（滑板單車落山，5km／落差 566m）</li>
               <li>晏晝落山，火車經<b>茵特拉肯</b>轉巴士去 <b>Iseltwald</b>（約 12 分鐘、10 分鐘一班），行《<b>愛的迫降</b>》拍攝碼頭（CHF 5 入場），布里恩茨湖水色靚爆</li>
-              <li>傍晚原路返<b>格林德瓦</b>，過最後一晚</li>
+              <li>傍晚原路返<b>格林德瓦</b></li>
+              <li>🌇 <b>日落 21:21</b>——食完飯仲有成兩個鐘光，village 散步睇艾格峰北壁轉金色</li>
             </ul>
             <div class="pin">🛴 First Mountain Cart 通常5月中先開，Trottibike 就4月尾已開，一家人各自揀啱難度嘅玩法</div>
             <div class="stay"><span class="lbl">宿</span> 格林德瓦 <span class="badge">第 3 晚 · 3日3夜 🌟</span></div>
@@ -355,12 +370,14 @@
 
         <div class="item move reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day04.jpg" alt="策馬特 · 馬特洪峰" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 4</span><span class="date">6月14日 · 週一</span><span class="citytag">格林德瓦 → 策馬特</span></div>
             <h3>Spiez 湖畔 ➔ 策馬特金頂日落</h3>
             <div class="transport"><span>🚄</span> 格林德瓦 <span class="arw">→</span> Spiez <span class="arw">→</span> 策馬特</div>
             <ul class="acts">
               <li>退房，火車到 <b>Spiez</b>，行李鎖車站，行落湖邊城堡食 lunch，唔使趕</li>
-              <li>下午入<b>策馬特</b> check-in，睇馬特洪峰金頂日落</li>
+              <li>下午入<b>策馬特</b> check-in</li>
+              <li>🌄 黃昏行去 <b>Kirchbrücke 橋</b>——經典馬特洪峰打卡位，<b>日落 21:21</b>，唔使趕</li>
             </ul>
             <div class="pin">🚉 純粹拉車日，一程搞掂，最輕鬆嗰日</div>
             <div class="stay"><span class="lbl">宿</span> 策馬特 <span class="badge">第 1 晚</span></div>
@@ -369,15 +386,17 @@
 
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto tall" src="images/day05.jpg" alt="Riffelsee 倒影" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 5</span><span class="date">6月15日 · 週二</span><span class="citytag">策馬特</span></div>
             <h3>Gornergrat · Riffelsee 倒影 📐📸</h3>
             <ul class="acts">
               <li><b>一朝早</b>搭 <b>Gornergrat 齒軌火車</b>上山（越早越好，風未起）</li>
               <li>喺 <b>Rotenboden</b> 站落車，行幾步就到 <b>Riffelsee</b>——全瑞士最經典嘅馬特洪峰倒影位 📸</li>
               <li>再上 Gornergrat 頂站睇冰川全景，同「三角朱古力神山」影合照</li>
-            </ul>
             <div class="pin">📸 <b>倒影一定要朝早</b>：中午起風之後湖面就碎晒，影唔到鏡面倒影。6月中海拔 2,757m 可能仲有殘雪或者結冰，影唔到都當去過，唔好強求</div>
-            <div class="pin">⚠️ 策馬特今次得 2 晚，<b>冇後備日</b>，撞正大風就冇第二次機會</div>
+            <li>☀️ <b>下午</b>搭 <b>Sunnegga 地底纜車</b>（5 分鐘）上山，<b>Leisee</b> 就喺站旁邊——<b>第二次影馬特洪峰倒影嘅機會</b></li>
+            </ul>
+            <div class="pin">🎁 6 月日落夜到 <b>21:21</b>，本來空咗嘅下午啱啱好補返 Sunnegga。朝早 Riffelsee 撞大風，下午 Leisee 仲可以再試一次</div>
             <div class="stay"><span class="lbl">宿</span> 策馬特 <span class="badge">第 2 晚 · 2日2夜 🌟</span></div>
           </div>
         </div>
@@ -397,6 +416,7 @@
         <!-- Day 7 — Zermatt to Venice via Milan (transit, no overnight) -->
         <div class="item move reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day06.jpg" alt="威尼斯 大運河" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 6</span><span class="date">6月16日 · 週三</span><span class="citytag">策馬特 → 威尼斯</span></div>
             <h3>跨國拉車日：經米蘭轉車入水都</h3>
             <div class="transport"><span>🚄</span> 策馬特 <span class="arw">→</span> Visp <span class="arw">→</span> 米蘭 <span class="arw">→</span> 威尼斯 · 全程約 6–7 小時</div>
@@ -413,6 +433,7 @@
         <!-- Day 8 — Venice full day -->
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day07.jpg" alt="Burano 彩虹島" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 7</span><span class="date">6月17日 · 週四</span><span class="citytag">威尼斯</span></div>
             <h3>Burano ＋ 總督宮 ＋ 貢多拉 🌈🏛️🛶</h3>
             <div class="transport"><span>🚤</span> Fondamente Nove <span class="arw">→</span> Burano <span class="arw">→</span> 聖馬可 · vaporetto 12 號線</div>
@@ -423,6 +444,7 @@
               <li><b>14:00</b> 🏛️ <b>總督宮 (Doge's Palace)</b>——預約時段，約 2 鐘，行埋<b>嘆息橋</b>同地牢</li>
               <li><b>16:00</b> ⛪ 聖馬可大教堂（攰就 skip，喺外面睇一樣震撼）</li>
               <li><b>17:00</b> 🛶 <b>貢多拉</b> 30 分鐘——黃昏光線最靚、人又少啲</li>
+              <li><b>19:30</b> 🌇 <b>學院橋 (Ponte dell'Accademia)</b> 睇大運河日落（<b>21:02</b>）</li>
             </ul>
             <div class="pin">🕗 <b>三樣一日做晒係得，但一定要朝早出發。</b> Burano 擺朝早（人少、光靚）、總督宮訂 <b>14:00 之後</b>留 buffer、貢多拉擺最後食黃昏。</div>
             <div class="pin">🎟️ 要預先訂：<b>總督宮 timed entry</b> · <b>貢多拉 8 人要 2 隻船</b>（每隻上限 5 人，官方價約 €90／30 分鐘，19:00 後 €110，認住官方碼頭）· <b>ACTV 24 小時船票約 €25</b>（單程散票 €9.50，今日最少搭 4 程）</div>
@@ -434,6 +456,7 @@
         <!-- Day 9 — Venice to Florence -->
         <div class="item move reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day08.jpg" alt="烏菲茲美術館" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 8</span><span class="date">6月18日 · 週五</span><span class="citytag">威尼斯 → 佛羅倫斯</span></div>
             <h3>文藝復興初見 · 烏菲茲朝聖 🎨</h3>
             <div class="transport"><span>🚄</span> 威尼斯 <span class="arw">→</span> 佛羅倫斯 · 高鐵約 2 小時</div>
@@ -450,6 +473,7 @@
         <!-- Day 9 — Accademia + Duomo + sunset -->
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto tall" src="images/day09.jpg" alt="大衛像" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 9</span><span class="date">6月19日 · 週六</span><span class="citytag">佛羅倫斯</span></div>
             <h3>大衛像朝聖 · Duomo · 日落 🎨🌇</h3>
             <ul class="acts">
@@ -465,13 +489,14 @@
         <!-- Day 10 — Pisa full day -->
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto tall" src="images/day10.jpg" alt="比薩斜塔" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 10</span><span class="date">6月20日 · 週日</span><span class="citytag">佛羅倫斯 ⇄ 比薩</span></div>
             <h3>比薩斜塔 · 唔使趕嘅一日 🗼</h3>
             <div class="transport"><span>🚄</span> 佛羅倫斯 <span class="arw">⇄</span> 比薩 · 區域車每程約 1h</div>
             <ul class="acts">
               <li>搭區域車去<b>比薩</b>（毋須預訂），行<b>奇跡廣場 (Piazza dei Miracoli)</b>：斜塔、主教座堂、洗禮堂</li>
               <li>影經典「用手托住斜塔」打卡相，想爬塔就預先訂飛</li>
-              <li>傍晚返佛羅倫斯，最後一晚慢慢食餐好</li>
+              <li>傍晚返佛羅倫斯，行下 <b>Oltrarno / Santo Spirito</b> 區（本地人多過遊客），最後一晚慢慢食餐好（<b>日落 21:00</b>）</li>
             </ul>
             <div class="pin">✅ <b>今次多咗一晚佛羅倫斯</b>，所以比薩可以獨立一日，唔使再同大衛像＋Duomo 迫喺同一日——四位長輩輕鬆好多</div>
             <div class="pin">🧳 即日來回，行李留喺酒店，唔使拖喼</div>
@@ -482,6 +507,7 @@
         <!-- Day 11 — Pisa day trip + move to Rome -->
         <div class="item move reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day11.jpg" alt="許願池" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 11</span><span class="date">6月21日 · 週一</span><span class="citytag">佛羅倫斯 → 羅馬</span></div>
             <h3>進城永恆之城</h3>
             <div class="transport"><span>🚄</span> 佛羅倫斯 <span class="arw">→</span> 羅馬 · 高鐵約 1.5 小時</div>
@@ -496,11 +522,13 @@
         <!-- Day 12 -->
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day12.jpg" alt="鬥獸場" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 12</span><span class="date">6月22日 · 週二</span><span class="citytag">羅馬</span></div>
             <h3>震撼古城 🏟️</h3>
             <ul class="acts">
               <li>全日參觀<b>鬥獸場</b>同<b>古羅馬廣場</b></li>
               <li>專心留畀古羅馬歷史遺跡，慢慢影相</li>
+              <li>🌇 黃昏行 <b>納沃納廣場 (Piazza Navona)</b> 同 <b>萬神殿 (Pantheon)</b>，兩個都係戶外、唔使買飛（<b>日落 20:49</b>）</li>
             </ul>
             <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 2 晚</span></div>
           </div>
@@ -509,6 +537,7 @@
         <!-- Day 13 -->
         <div class="item reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day13.jpg" alt="聖伯多祿大殿" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 13</span><span class="date">6月23日 · 週三</span><span class="citytag">羅馬</span></div>
             <h3>梵蒂岡與美食探索</h3>
             <ul class="acts">
@@ -523,12 +552,14 @@
         <!-- Day 14 -->
         <div class="item move reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day14.jpg" alt="米蘭大教堂" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 14</span><span class="date">6月24日 · 週四</span><span class="citytag">羅馬 → 米蘭</span></div>
             <h3>北上米蘭 · 大結局開始</h3>
             <div class="transport"><span>🚄</span> 羅馬 <span class="arw">→</span> 米蘭 · 高鐵約 3 小時</div>
             <ul class="acts">
               <li>朝早搭高鐵直上<b>米蘭</b></li>
               <li>下午參觀<b>米蘭大教堂</b>同<b>艾曼紐二世迴廊</b></li>
+              <li>🍹 夜晚去 <b>Navigli 運河區</b> 飲 aperitivo——米蘭人夜蒲地，<b>日落 21:16</b>，成條運河好熱鬧</li>
             </ul>
             <div class="stay"><span class="lbl">宿</span> 米蘭 <span class="badge">第 1 晚</span></div>
           </div>
@@ -537,11 +568,15 @@
         <!-- Day 15 -->
         <div class="item finale highlight reveal">
           <div class="card">
+            <img class="dayphoto" src="images/day15.jpg" alt="最後的晚餐" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 15</span><span class="date">6月25日 · 週五</span><span class="citytag">米蘭 · 大結局</span></div>
             <h3>《最後的晚餐》🎨</h3>
             <ul class="acts">
               <li>參觀達文西<b>《最後的晚餐》</b>真跡</li>
-              <li>下晝行米蘭設計區、高級家電 showroom，或者做最後手信衝刺</li>
+              <li>☀️ 《最後的晚餐》實際只睇 15 分鐘，全日仲有大把時間：</li>
+              <li>🏰 <b>斯福爾扎城堡 (Castello Sforzesco)</b> ＋ <b>Sempione 公園</b></li>
+              <li>⛪ <b>Duomo 天台露台</b>——行上大教堂屋頂，喺石雕之間望成個米蘭</li>
+              <li>🎨 <b>Brera</b> 藝術區行街，或者做最後手信衝刺</li>
             </ul>
             <div class="pin">🎟️ 《最後的晚餐》記得提早幾星期搶飛</div>
             <div class="stay"><span class="lbl">宿</span> 米蘭 <span class="badge">第 2 晚 · 3日2夜 🌟</span></div>
@@ -884,6 +919,35 @@
       </div>
 
       <div class="fare-note shared" style="border:1px solid var(--line); border-radius:16px; padding:12px 18px">✅ 意大利段四間酒店已經 <b>Booking.com 確認訂咗</b>，3間房，價錢係實際確認總價（唔再係參考價）。瑞士段兩間就仲係已選定、尚未落實訂咗。</div>
+    </section>
+
+
+    <!-- ============ PHOTO CREDITS ============ -->
+    <section>
+      <div class="leg-head reveal">
+        <div class="kicker">實用資訊 · 圖片</div>
+        <h2>📷 相片來源</h2>
+      </div>
+      <div class="fare-note shared reveal" style="border:1px solid var(--line); border-radius:16px; padding:14px 18px">
+      全部相片來自 <b>Wikimedia Commons</b>，採用自由授權（CC BY／CC BY-SA／公有領域）。
+      <ul style="margin:10px 0 0 18px; line-height:1.9; font-size:.82rem">
+        <li>Day 1 · 琉森 卡貝爾橋 — <a href="https://commons.wikimedia.org/wiki/File:Kapellbruecke.JPG">Kapellbruecke.JPG</a>，Simon Koopmann，CC BY-SA 2.5</li>
+        <li>Day 2 · 少女峰 — <a href="https://commons.wikimedia.org/wiki/File:Sphinx_et_Jungfrau_-_img_06980.jpg">Sphinx_et_Jungfrau_-_img_06980.jpg</a>，Pmau，CC BY-SA 4.0</li>
+        <li>Day 3 · Iseltwald 布里恩茨湖 — <a href="https://commons.wikimedia.org/wiki/File:5902_-_Iseltwald.JPG">5902_-_Iseltwald.JPG</a>，Andrew Bossi，CC BY-SA 2.5</li>
+        <li>Day 4 · 策馬特 · 馬特洪峰 — <a href="https://commons.wikimedia.org/wiki/File:1_zermatt_evening_2022.jpg">1_zermatt_evening_2022.jpg</a>，Chensiyuan，CC BY-SA 4.0</li>
+        <li>Day 5 · Riffelsee 倒影 — <a href="https://commons.wikimedia.org/wiki/File:Riffelsee_1.jpg">Riffelsee_1.jpg</a>，Jeffrey Pang，CC BY 2.0</li>
+        <li>Day 6 · 威尼斯 大運河 — <a href="https://commons.wikimedia.org/wiki/File:View_of_the_Grand_Canal_from_Rialto_to_Ca'Foscari.jpg">View_of_the_Grand_Canal_from_Rialto_to_Ca'Foscari.jpg</a>，Didier Descouens，CC BY-SA 4.0</li>
+        <li>Day 7 · Burano 彩虹島 — <a href="https://commons.wikimedia.org/wiki/File:Burano_Venice_17.jpg">Burano_Venice_17.jpg</a>，kallerna，CC BY-SA 4.0</li>
+        <li>Day 8 · 烏菲茲美術館 — <a href="https://commons.wikimedia.org/wiki/File:Florence,_Italy_-_panoramio_(125).jpg">Florence,_Italy_-_panoramio_(125).jpg</a>，Arek N.，CC BY-SA 3.0</li>
+        <li>Day 9 · 大衛像 — <a href="https://commons.wikimedia.org/wiki/File:'David'_by_Michelangelo_Fir_JBU004.jpg">'David'_by_Michelangelo_Fir_JBU004.jpg</a>，Jörg Bittner Unna，CC BY 3.0</li>
+        <li>Day 10 · 比薩斜塔 — <a href="https://commons.wikimedia.org/wiki/File:Italy_-_Pisa_-_Leaning_Tower.jpg">Italy_-_Pisa_-_Leaning_Tower.jpg</a>，Arne Müseler，CC BY-SA 3.0 de</li>
+        <li>Day 11 · 許願池 — <a href="https://commons.wikimedia.org/wiki/File:Trevi_Fountain_-_Roma.jpg">Trevi_Fountain_-_Roma.jpg</a>，NikonZ7II，CC BY-SA 4.0</li>
+        <li>Day 12 · 鬥獸場 — <a href="https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg">Colosseo_2020.jpg</a>，FeaturedPics，CC BY-SA 4.0</li>
+        <li>Day 13 · 聖伯多祿大殿 — <a href="https://commons.wikimedia.org/wiki/File:Vatican_City_(St._Peter_Square).jpg">Vatican_City_(St._Peter_Square).jpg</a>，Apaleutos25，CC BY-SA 4.0</li>
+        <li>Day 14 · 米蘭大教堂 — <a href="https://commons.wikimedia.org/wiki/File:Milan_Cathedral_from_Piazza_del_Duomo.jpg">Milan_Cathedral_from_Piazza_del_Duomo.jpg</a>，Jiuguang Wang，CC BY-SA 3.0</li>
+        <li>Day 15 · 最後的晚餐 — <a href="https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg">The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg</a>，Leonardo da Vinci，Public domain</li>
+      </ul>
+      </div>
     </section>
 
     <footer class="foot">
