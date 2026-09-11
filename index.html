@@ -190,7 +190,7 @@
   }
   .card { overflow: hidden; padding: 0; }
   .card > .card-top, .card > h3, .card > .transport, .card > .acts,
-  .card > .pin, .card > .stay { margin-left: 20px; margin-right: 20px; }
+  .card > .food, .card > .pin, .card > .stay { margin-left: 20px; margin-right: 20px; }
   .card > .card-top { margin-top: 20px; }
   .card > .stay { margin-bottom: 18px; }
   .dayphoto { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover;
@@ -235,6 +235,19 @@
     background: color-mix(in srgb, var(--brass) 14%, transparent);
     border: 1px solid color-mix(in srgb, var(--brass) 35%, transparent); padding: 5px 11px; border-radius: 8px;
   }
+
+  .food {
+    margin-top: 14px; padding: 12px 14px; border-radius: 12px;
+    background: color-mix(in srgb, var(--sienna) 7%, var(--surface-2));
+    border: 1px solid color-mix(in srgb, var(--sienna) 22%, transparent);
+  }
+  .food .fl { display: block; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--sienna); font-weight: 700; margin-bottom: 8px; }
+  .food ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+  .food li { font-size: .9rem; color: var(--ink-soft); }
+  .food li b { color: var(--ink); font-weight: 600; }
+  .food li .note { display: block; font-family: var(--font-mono); font-size: .74rem;
+    color: var(--ink-faint); margin-top: 2px; letter-spacing: .01em; }
 
   /* Info: accommodation */
   .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
@@ -545,6 +558,15 @@
               <li>退房，搭高鐵去<b>羅馬</b> check-in</li>
               <li>下午漫步<b>西班牙廣場</b>同<b>特雷維噴泉（許願池）</b>，感受古都氣息</li>
             </ul>
+            <div class="food">
+              <span class="fl">🍕 食邊度</span>
+              <ul>
+                <li><b>Pinsitaly Trevi</b>——羅馬 pinsa，長時間發酵、外脆內軟
+                  <span class="note">Via della Panetteria 12 · 許願池行 2 分鐘</span></li>
+                <li><b>Cicilardone a Monte Caruso</b>——1925 年老店，Basilicata 菜
+                  <span class="note">Via Farini 12 · 酒店行約 5 分鐘 · 坐完車攰就食呢間</span></li>
+              </ul>
+            </div>
             <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 1 晚</span></div>
           </div>
         </div>
@@ -556,11 +578,19 @@
             <div class="card-top"><span class="day">DAY 12</span><span class="date">6月22日 · 週二</span><span class="citytag">羅馬</span></div>
             <h3>震撼古城 🏟️</h3>
             <ul class="acts">
-              <li>全日參觀<b>鬥獸場</b>同<b>古羅馬廣場</b></li>
-              <li>專心留畀古羅馬歷史遺跡，慢慢影相</li>
-              <li>🏛️ <b>萬神殿 (Pantheon)</b>——⚠️ <b>而家要預約買飛（€7）</b>，而且 <b>19:00 閂、18:30 最後入場</b>。訂 17:00–18:00 時段</li>
-              <li>🌇 之後行 <b>納沃納廣場 (Piazza Navona)</b> 睇黃昏，戶外唔使飛（<b>日落 20:49</b>）</li>
+              <li><b>07:30</b> 朝早趁人少、天氣涼，酒店附近散步</li>
+              <li><b>10:00</b> 🏟️ <b>鬥獸場 (Colosseum)</b>——預約時段，朝早入場涼快啲</li>
+              <li>接住 <b>古羅馬廣場 (Roman Forum)</b> ＋ <b>君士坦丁凱旋門</b>，一路行落去</li>
+              <li><b>14:00</b> 🏛️ <b>萬神殿 (Pantheon)</b>——⚠️ <b>要預約買飛（€7）</b>，<b>19:00 閂、18:30 最後入場</b>，所以擺晏晝唔擺黃昏</li>
+              <li>🌇 黃昏行 <b>納沃納廣場 (Piazza Navona)</b>，戶外唔使飛（<b>日落 20:49</b>）</li>
             </ul>
+            <div class="food">
+              <span class="fl">🍨 食邊度</span>
+              <ul>
+                <li><b>Giolitti</b> 雪糕——1900 年開到今日，羅馬最出名嘅 gelateria 之一
+                  <span class="note">Via degli Uffici del Vicario 40 · 萬神殿行 2 分鐘 · 睇完萬神殿順路</span></li>
+              </ul>
+            </div>
             <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 2 晚</span></div>
           </div>
         </div>
@@ -576,6 +606,15 @@
               <li>下晝去 <b>Trastevere</b>（特拉斯提弗列）區，隱世小店同地道羅馬菜</li>
               <li>夜晚食餐正宗 <b>Carbonara</b>（卡邦尼意粉）</li>
             </ul>
+            <div class="food">
+              <span class="fl">🍝 食邊度</span>
+              <ul>
+                <li><b>Dar Poeta</b>——1995 年開，Trastevere 老字號 pizza
+                  <span class="note">Vicolo del Bologna 45 · 12:00–24:00 · 就喺 Trastevere 區內，順路</span></li>
+                <li><b>Carbonara</b> ＋ <b>Amatriciana</b>——羅馬兩大經典意粉
+                  <span class="note">⚠️ Amatriciana 係菜名唔係餐廳名，想食邊間要再揀</span></li>
+              </ul>
+            </div>
             <div class="stay"><span class="lbl">宿</span> 羅馬 <span class="badge">第 3 晚 · 3日3夜 🌟</span></div>
           </div>
         </div>
