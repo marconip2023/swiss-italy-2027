@@ -457,25 +457,25 @@ END:VEVENT
 BEGIN:VEVENT
 UID:halffare@swiss-italy-2027
 DTSTAMP:20261001T000000Z
-DTSTART;TZID=Asia/Hong_Kong:20270520T200000
-DTEND;TZID=Asia/Hong_Kong:20270520T204500
-SUMMARY:🇨🇭 買 Swiss Half Fare Card × 6(已計完數)
-DESCRIPTION:✅ 已經逐程計完數,結論:買【Swiss Half Fare Card
- 】,唔好買 Swiss Travel Pass。6 人慳 HK$4,554–6,560。\n\n【買
- 咩】Swiss Half Fare Card,CHF 150/人 × 6 = CHF 900 ≈ HK$8,685\n【
- 喺邊買】sbb.ch 或 swissrailways.com,PDF／手機票即時收\n🔴
- 【最緊要】有效期一個月,開始日自己揀 —— 要揀 2027-0
- 6-11(抵達蘇黎世嗰日),唔好用落單嗰日做開始日,系統預
- 設會揀錯。\n\n【點解唔買 STP】STP 貴 CHF 249,佢買返嚟嘅
- 係點對點車船免費;但我哋全程點對點車船全票先 CHF 391,
- 用半價卡只係畀 CHF 195.50 —— STP 最多幫到 195.50,補唔返
-  249。\n而且 Gornergrat／First／Sunnegga 兩種證都係 50%,完全
- 抵銷;少女峰仲要係 STP 得 25%、半價卡有 50%,STP 喺度蝕多
- 。\n\n【買完跟住做】上 gornergrat.ch 買 6/15 Zermatt–Gornergr
- at 來回 e-ticket,落單揀「半價」= CHF 66。\n⚠️ 網上買唔
- 會平啲,買嘅係唔使排隊。上車要帶得出半價卡本身,查
- 票會睇。\n\n⚠️ 以上係 2026 年價,落單前上 sbb.ch 覆核
- 一次(安全邊際 CHF 157–227,好難翻盤)。
+DTSTART;TZID=Asia/Hong_Kong:20270310T200000
+DTEND;TZID=Asia/Hong_Kong:20270310T204500
+SUMMARY:🇨🇭 買 Swiss Half Fare Card × 6(少女峰搶飛前兩日)
+DESCRIPTION:🔴 一定要喺 3/12 少女峰搶飛【之前】買起,先
+ 至揀得到「半價」。\n\n官方規則係:買折扣票嗰陣唔需
+ 要已經持有半價卡,旅行當日有效就得。但早買冇任何代
+ 價(價錢一樣、開始日另外揀),所以唔值得喺搶飛當日先
+ 賭個結帳系統。\n\n【買咩】Swiss Half Fare Card,CHF 150/人 × 
+ 6 = CHF 900 ≈ HK$8,685\n【喺邊買】sbb.ch 或 swissrailways.com,PDF
+ ／手機票即時收\n🔴【最緊要】有效期一個月,開始日自
+ 己揀 —— 要揀 2027-06-11(抵達蘇黎世嗰日),唔好用落單嗰
+ 日做開始日,系統預設會揀錯。\n(可提前約 180 日買,即 20
+ 26 年 12 月中已經買得,今日買實穩陣。)\n\n【點解唔買 ST
+ P】已逐程計過:半價卡贏 Swiss Travel Pass,6 人慳 HK$4,554–6,
+ 560。STP 貴 CHF 249,但我哋全程點對點車船全票先 CHF 391,補
+ 唔返差價;而且少女峰 STP 得 25% 折、半價卡有 50%。\n\n【
+ 買完即刻做】3/12 少女峰搶飛(揀半價),之後 gornergrat.ch 
+ 買 6/15 來回 e-ticket。\n⚠️ 上車要帶得出半價卡本身,查
+ 票會睇。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
