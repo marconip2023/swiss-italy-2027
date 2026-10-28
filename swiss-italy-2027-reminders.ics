@@ -44,6 +44,34 @@ TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ec-visp@swiss-italy-2027
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=Asia/Hong_Kong:20261218T210000
+DTEND;TZID=Asia/Hong_Kong:20261218T214500
+SUMMARY:🚆 Visp → 米蘭 EuroCity 開窗(180 日前,最早可訂)
+DESCRIPTION:6/16(三)。sbb.ch\n\n⚠️ 呢程可以比其他火車早
+ 成兩個月訂 —— SBB 國際票去意大利開放【180 日前】,
+ 今日正好開窗。\n\n💰 Supersaver 係最平嘅票種,【越早買
+ 折扣越大】,而且賣完即止。所以見到有就買,唔好等。\n
+ \n⚠️ Domodossola–米蘭段可能要另外訂位(約 €10),落單
+ 時睇清楚。\n\n📌 注意:意大利【國內】4 程(米蘭→威尼
+ 斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭)
+ 係另一回事 —— 嗰啲受 6/12 歐洲時刻表換季影響,2 月
+ 起先至陸續上線,最遲 5/17 要訂晒。
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚆 Visp → 米蘭 EuroCity 開窗
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🚆 Visp → 米蘭 EuroCity 開窗
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:passport@swiss-italy-2027
 DTSTAMP:20260910T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20270105T200000
