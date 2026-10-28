@@ -268,6 +268,25 @@
     border-bottom: 1px solid color-mix(in srgb, var(--brass) 40%, transparent); }
   .info-card .hmeta a:hover { color: var(--sienna); }
 
+  .wacopy { margin-top: 18px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .wa-top { display: flex; align-items: center; gap: 10px; padding: 11px 14px;
+    background: var(--surface-2); border-bottom: 1px solid var(--line-soft); flex-wrap: wrap; }
+  .wa-label { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--brass-strong); font-weight: 700; }
+  .wa-btn { margin-left: auto; font-family: var(--font-mono); font-size: .74rem; font-weight: 700;
+    color: var(--surface); background: var(--brass-strong); border: none; border-radius: 8px;
+    padding: 7px 14px; cursor: pointer; transition: background .2s; }
+  .wa-btn:hover { background: var(--sienna); }
+  .wa-btn.done { background: var(--ch); }
+  .wacopy pre { margin: 0; padding: 14px; font-family: var(--font-mono); font-size: .76rem;
+    line-height: 1.7; color: var(--ink-soft); white-space: pre-wrap; word-break: break-word;
+    max-height: 340px; overflow-y: auto; }
+  .icsdl { display: flex; gap: 12px; align-items: flex-start; background: var(--surface);
+    border: 1px solid color-mix(in srgb, var(--brass) 35%, transparent); border-radius: 14px;
+    padding: 14px 16px; margin-top: 12px; box-shadow: var(--shadow); }
+  .icsdl a { color: var(--brass-strong); font-weight: 700; }
+
   /* Info: tips + table */
   .tip { display: flex; gap: 12px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-top: 12px; box-shadow: var(--shadow); }
   .tip .emo { font-size: 1.2rem; line-height: 1.4; flex: 0 0 auto; }
@@ -402,6 +421,44 @@
       <div class="tip reveal" style="margin-top:12px">
         <span class="emo">💡</span>
         <div class="body"><strong>少女峰揀邊條路線，6 個人差成 HK$4,000。</strong> 行 <span class="hl">Grindelwald Terminal 經 Eiger Express</span> 比傳統路線平好多——落單時兩條都格一格。行最短路線嘅話每人變 <b>≈ HK$5,064</b>、6 人 <b>HK$30,386</b>。<br>（2026 年價，部分短程車船係估算，CHF 1 ≈ HK$9.65）</div>
+      </div>
+
+      <div class="icsdl reveal">
+        <span class="emo" style="font-size:1.2rem">📅</span>
+        <div class="body" style="font-size:.94rem; color:var(--ink-soft)"><strong style="color:var(--ink)">驚買唔到？擺入手機日曆。</strong>
+          <a href="swiss-italy-2027-reminders.ics" download>⬇️ 下載 23 個提醒（.ics）</a>
+          ——每個都有 <b>7 日前 / 1 日前 / 30 分鐘前</b> 三重鬧鐘，時間已換算做香港時間。
+          iPhone／Mac／Google Calendar 都 import 到。<br>
+          <span style="font-size:.86rem">（喺 Claude 版面入面要用外面個連結先下載到：<a href="https://marconip2023.github.io/swiss-italy-2027/swiss-italy-2027-reminders.ics">開啟下載連結 ↗</a>）</span></div>
+      </div>
+
+      <div class="wacopy reveal">
+        <div class="wa-top">
+          <span class="wa-label">📱 WhatsApp 精簡版</span>
+          <button class="wa-btn" type="button" id="waCopy">📋 複製</button>
+        </div>
+        <pre id="waText">🎟️ 2027 瑞意 — 要搶嘅飛（按日期）
+
+2/2　 烏菲茲＋瓦薩里走廊、Accademia
+3/12　少女峰（搶朝早場）
+3/18　意大利火車 5 程（窗口一開即訂）
+3/22　比薩斜塔（48 鐘內賣曬）
+3/23　《最後的晚餐》19:00 ⚠️ 最難搶
+　　　網上一次最多 5 張，8 個人要分單
+3/25　米蘭 Duomo 天台
+4/24　梵蒂岡（香港朝早 6:00）
+5/17　🔴 火車最後死線
+5/23　鬥獸場 ＋ 萬神殿
+
+⚠️ 6/12 係歐洲火車換季日，我哋啲車全部喺換季之後，
+訂票窗口可能由 4 個月縮到得 30 日。
+2 月起每兩星期 check 一次。
+
+📅 日曆提醒檔（23 個，import 入手機就唔使記）：
+https://marconip2023.github.io/swiss-italy-2027/swiss-italy-2027-reminders.ics
+
+📄 全部細節：
+https://marconip2023.github.io/swiss-italy-2027/</pre>
       </div>
 
       <div class="tip reveal" style="margin-top:12px">
@@ -1109,6 +1166,29 @@
         var panel = document.querySelector('.fare-panel[data-fare-panel="' + btn.dataset.fareTab + '"]');
         if (panel) panel.classList.add('active');
       });
+    });
+  })();
+
+  (function () {
+    var btn = document.getElementById('waCopy'), box = document.getElementById('waText');
+    if (!btn || !box) return;
+    function flash(ok) {
+      btn.textContent = ok ? '✅ 複製咗' : '⚠️ 自己 select';
+      if (ok) btn.classList.add('done');
+      setTimeout(function () { btn.textContent = '📋 複製'; btn.classList.remove('done'); }, 2000);
+    }
+    function legacy(s) {
+      var ta = document.createElement('textarea');
+      ta.value = s; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta); flash(ok);
+    }
+    btn.addEventListener('click', function () {
+      var s = box.innerText;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(s).then(function () { flash(true); }, function () { legacy(s); });
+      } else { legacy(s); }
     });
   })();
 
