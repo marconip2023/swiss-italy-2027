@@ -1118,6 +1118,53 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
         </div>
       </div>
 
+      <div class="wacopy reveal" style="margin-top:18px">
+        <div class="wa-top">
+          <span class="wa-label">🚆 逐程清單 · 簡單版（可複製）</span>
+          <button class="wa-btn" type="button">📋 複製</button>
+        </div>
+        <pre>🚆 逐程火車清單（簡單版）
+
+6月11日週五 - 蘇黎世機場 → 格林德瓦 -（Bern、Interlaken Ost 轉車）約 2h45
+6月11日週五 - 格林德瓦 ⇄ Lauterbrunnen ⇄ Wengen -（Zweilütschinen 轉車）來回
+
+6月12日週六 - 格林德瓦 Terminal → 少女峰 -（Eiger Express）約 50 分鐘 🔴
+6月12日週六 - 少女峰 → Interlaken Ost -（Kleine Scheidegg、Lauterbrunnen 轉車）約 2h 🔴
+6月12日週六 - Interlaken Ost → 圖恩 - 直達 約 30 分鐘
+6月12日週六 - ⛵ 圖恩 → 奧伯霍芬 → Spiez - 湖船 約 1h15
+6月12日週六 - Spiez → 格林德瓦 -（Interlaken Ost 轉車）約 1h15
+
+6月13日週日 - 🚠 格林德瓦 ⇄ First - 纜車來回 每程約 25 分鐘
+6月13日週日 - 格林德瓦 → Interlaken Ost - 直達 約 35 分鐘
+6月13日週日 - ⛵ Interlaken Ost → Iseltwald → Giessbach → 布里恩茨 - 湖船
+6月13日週日 - 布里恩茨 → 格林德瓦 -（Interlaken Ost 轉車）約 1h
+
+6月14日週一 - 格林德瓦 → 策馬特 -（Interlaken Ost、Spiez、Brig 轉車，行 Lötschberg 山線）約 3h30
+
+6月15日週二 - 🚞 策馬特 ⇄ Gornergrat -（中途 Rotenboden 落車）每程約 35 分鐘
+6月15日週二 - 🚠 策馬特 ⇄ Sunnegga - 地底纜車來回 每程約 5 分鐘
+
+6月16日週三 - 策馬特 → 米蘭中央站 -（Visp 轉 EC）約 4h 🔴
+6月16日週三 - 米蘭中央站 → 威尼斯 Santa Lucia - 直達 約 2h30 🔴
+
+6月18日週五 - 威尼斯 Santa Lucia → 佛羅倫斯 SMN - 直達 約 2h 🔴
+
+6月20日週日 - 佛羅倫斯 SMN ⇄ 比薩 Centrale - 區域車來回 每程約 1h
+
+6月21日週一 - 佛羅倫斯 SMN → 羅馬 Termini - 直達 約 1h30 🔴
+
+6月24日週四 - 羅馬 Termini → 米蘭中央站 - 直達 約 3h 🔴
+
+6月26日週六 - 米蘭中央站 → Malpensa 機場 - Malpensa Express 約 50 分鐘
+
+🔴 = 要預先訂</pre>
+      </div>
+
+      <div class="tip reveal" style="margin-top:12px">
+        <span class="emo">🔢</span>
+        <div class="body">簡單版入面有 <b>7 個 🔴</b>，但只係 <b>6 張飛</b>——<span class="hl">少女峰上山同落山係同一張來回飛</span>（上行 Eiger Express、落行 Kleine Scheidegg 去 Interlaken Ost），落單時一次過揀晒就得。</div>
+      </div>
+
       <div class="reveal">
         <div class="tip">
           <span class="emo">🗓️</span>
@@ -1342,25 +1389,27 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
   })();
 
   (function () {
-    var btn = document.getElementById('waCopy'), box = document.getElementById('waText');
-    if (!btn || !box) return;
-    function flash(ok) {
-      btn.textContent = ok ? '✅ 複製咗' : '⚠️ 自己 select';
-      if (ok) btn.classList.add('done');
-      setTimeout(function () { btn.textContent = '📋 複製'; btn.classList.remove('done'); }, 2000);
-    }
-    function legacy(s) {
-      var ta = document.createElement('textarea');
-      ta.value = s; ta.style.position = 'fixed'; ta.style.opacity = '0';
-      document.body.appendChild(ta); ta.select();
-      var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
-      document.body.removeChild(ta); flash(ok);
-    }
-    btn.addEventListener('click', function () {
-      var s = box.innerText;
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(s).then(function () { flash(true); }, function () { legacy(s); });
-      } else { legacy(s); }
+    document.querySelectorAll('.wacopy').forEach(function (blk) {
+      var btn = blk.querySelector('.wa-btn'), box = blk.querySelector('pre');
+      if (!btn || !box) return;
+      function flash(ok) {
+        btn.textContent = ok ? '✅ 複製咗' : '⚠️ 自己 select';
+        if (ok) btn.classList.add('done');
+        setTimeout(function () { btn.textContent = '📋 複製'; btn.classList.remove('done'); }, 2000);
+      }
+      function legacy(s) {
+        var ta = document.createElement('textarea');
+        ta.value = s; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta); flash(ok);
+      }
+      btn.addEventListener('click', function () {
+        var s = box.innerText;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(s).then(function () { flash(true); }, function () { legacy(s); });
+        } else { legacy(s); }
+      });
     });
   })();
 
