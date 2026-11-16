@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>由阿爾卑斯到永恆之城 · 17 日家庭之旅</title>
+</head>
+<body>
 <style>
   :root {
     /* ---- Palette: "Grand Tour rail" — Alpine dusk navy + Renaissance brass ---- */
@@ -302,6 +304,42 @@
   .tt .when { font-family: var(--font-mono); color: var(--brass-strong); white-space: nowrap; }
   .tt tr:last-child td { border-bottom: none; }
 
+  /* Per-leg train list */
+  .legkey { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 16px; font-size: .8rem; color: var(--ink-soft); }
+  .legkey span { display: inline-flex; align-items: center; gap: 6px; }
+  .tk { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap;
+    font-family: var(--font-mono); font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+    padding: 3px 8px; border-radius: 999px; border: 1px solid transparent; }
+  .tk.must { color: #fff; background: var(--sienna); }
+  .tk.early { color: var(--brass-strong); background: color-mix(in srgb, var(--brass) 14%, transparent); border-color: color-mix(in srgb, var(--brass) 40%, transparent); }
+  .tk.walk { color: var(--ch); background: color-mix(in srgb, var(--ch) 10%, transparent); border-color: color-mix(in srgb, var(--ch) 35%, transparent); }
+  .legs { margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); overflow: hidden; }
+  .legs-country { padding: 10px 16px; background: var(--surface-2); border-bottom: 1px solid var(--line-soft);
+    font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; }
+  .legs-country + .leg, .leg + .leg { border-top: 1px solid var(--line-soft); }
+  .leg + .legs-country { border-top: 1px solid var(--line); }
+  .leg { display: grid; grid-template-columns: 62px 1fr auto; gap: 4px 12px; padding: 12px 16px; align-items: start; }
+  .leg.key { background: color-mix(in srgb, var(--sienna) 5%, transparent); }
+  .leg .ld { font-family: var(--font-mono); font-size: .76rem; color: var(--brass-strong); font-weight: 700; line-height: 1.4; padding-top: 2px; }
+  .leg .ld small { display: block; color: var(--ink-faint); font-weight: 500; }
+  .leg .lr { font-size: .94rem; color: var(--ink); font-weight: 600; line-height: 1.45; }
+  .leg .lr .arw { color: var(--sienna); font-weight: 700; margin: 0 2px; }
+  .leg .lr .via { color: var(--ink-faint); font-weight: 500; font-size: .82rem; }
+  .leg .lm { grid-column: 2 / 4; font-size: .82rem; color: var(--ink-soft); line-height: 1.55; }
+  .leg .lm b { color: var(--ink); }
+  .leg .lq { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
+  .leg .qty { font-family: var(--font-mono); font-size: .78rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
+  .leg .qty .plus { color: var(--ink-faint); font-weight: 500; }
+  @media (max-width: 480px) { .leg { grid-template-columns: 52px 1fr auto; padding: 12px 12px; } }
+  .tally { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+  .tally .t { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 12px; box-shadow: var(--shadow); text-align: center; }
+  .tally .t .n { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .tally .t.must .n { color: var(--sienna); }
+  .tally .t.early .n { color: var(--brass-strong); }
+  .tally .t.walk .n { color: var(--ch); }
+  .tally .t .l { font-size: .74rem; color: var(--ink-faint); margin-top: 2px; line-height: 1.4; }
+  @media (max-width: 480px) { .tally .t .n { font-size: 1.25rem; } }
+
   .foot { margin-top: 60px; padding-top: 28px; border-top: 1px solid var(--line); text-align: center; color: var(--ink-faint); font-size: .84rem; }
   .foot .brass { color: var(--brass); }
 
@@ -312,9 +350,6 @@
     .card { transition: box-shadow .25s ease; }
   }
 </style>
-</head>
-<body>
-
 <div class="trip">
   <div class="wrap">
 
@@ -327,8 +362,7 @@
       <div class="route" aria-label="行程路線">
         <div class="route-inner">
           <span class="stop"><span class="flag">🇨🇭</span>蘇黎世</span><span class="hop"></span>
-          <span class="stop">琉森</span><span class="hop"></span>
-          <span class="stop">格林德瓦</span><span class="hop"></span>
+                    <span class="stop">格林德瓦</span><span class="hop"></span>
           <span class="stop transit">Iseltwald · 布里恩茨湖</span><span class="hop"></span>
           <span class="stop">策馬特</span><span class="hop"></span>
           <span class="stop"><span class="flag">🇮🇹</span>威尼斯</span><span class="hop"></span>
@@ -384,7 +418,7 @@
             <tr><td class="when">2027年3月20日</td><td>⛪ <b>佛羅倫斯 Ghiberti Pass</b>（6/20）</td><td>✅ 唔係搶飛項目——已決定唔爬圓頂、唔上鐘樓（鐵絲網）。只有圓頂要固定時段，其餘 3 日內任入。大殿入場<b>免費</b>。買 €15 Ghiberti Pass 就夠</td></tr>
             <tr><td class="when"><b>2027年3月22日</b><br><b>（要搶）</b></td><td>🗼 <b>比薩斜塔爬塔</b>（6/20 週日）</td><td><b>正好 90 日前開窗</b>。6–8 月週末早上時段 48 小時內賣曬。官網 opapisa.it，€20</td></tr>
             <tr><td class="when"><b>2027年3月23日</b><br>週二 19:00<br><b>（最難搶）</b></td><td>🎟️ <b>《最後的晚餐》</b>（6/25）</td><td><b>每季放飛，5–8 月嗰季 = 3 月尾週二意大利時間 12:00</b>（2026 年係 3/24）。網上最多 5 張、電話最多 9 張 —— <b>8 個人要打電話或分兩單</b>。分鐘計就爆</td></tr>
-            <tr><td class="when">2027年3月25日</td><td>⛪ <b>米蘭 Duomo</b>（6/25）<br>✅ 買合併票</td><td>官網 <b>ticket.duomomilano.it</b>，3 個月前開賣，<b>時段制</b><br>🔴 要買 <b>Duomo Pass Lift ≈ €26／人</b>——包<b>教堂內部＋天台＋博物館＋地下考古區</b>，而且係<b>電梯</b>上天台（樓梯版 €22，但要行 251 級）<br>6 人約 €156。電梯時段旺季走得快過樓梯版，一開賣就訂<br>（淨買天台：樓梯 €16／電梯 €18。博物館逢週一閂，我哋 6/25 係週五冇影響）</tr>
+            <tr><td class="when">2027年3月25日</td><td>⛪ <b>米蘭 Duomo</b>（6/25）<br>✅ 買合併票</td><td>官網 <b>ticket.duomomilano.it</b>，3 個月前開賣，<b>時段制</b><br>🔴 要買 <b>Duomo Pass Lift ≈ €26／人</b>——包<b>教堂內部＋天台＋博物館＋地下考古區</b>，而且係<b>電梯</b>上天台（樓梯版 €22，但要行 251 級）<br>6 人約 €156。電梯時段旺季走得快過樓梯版，一開賣就訂<br>（淨買天台：樓梯 €16／電梯 €18。博物館逢週一閂，我哋 6/25 係週五冇影響）</td></tr>
             <tr><td class="when">2027年3月30日<br>週二 18:00</td><td>🎟️ 《最後的晚餐》<b>後備</b></td><td>⚠️ 淨係喺 3/23 未見開賣公布先做。留意 cenacolovinciano.org 個 news 版（3/28 歐洲轉夏令時，所以今次香港時間係 18:00）</td></tr>
             <tr><td class="when">2027年4月1日</td><td>🏛️ 總督宮（6/17）</td><td>訂 <b>14:00 或之後</b>，留 buffer 俾 Burano 遲到</td></tr>
             <tr><td class="when"><b>2027年4月24日</b><br>香港朝早 6:00</td><td>⛪ <b>梵蒂岡博物館</b>（6/23）</td><td><b>60 日前歐洲午夜</b>放飛。訂早上時段，落晝好熱好逼</td></tr>
@@ -398,7 +432,7 @@
             <tr><td class="when">2027年6月16日<br>18:00</td><td>🎟️ 《最後的晚餐》週三補票</td><td>⚠️ 淨係喺 3 月搶唔到先做。官方逢週三 12:00 意大利時間放下星期嘅飛（只限網上）</td></tr>
             <tr><td class="when">2027年6月23日<br>18:00</td><td>🎟️ 《最後的晚餐》<b>最後機會</b></td><td>⚠️ 6/25 之前最後一次放飛。再搶唔到就 Plan B：Leonardo3 博物館有 1:1 複製</td></tr>
             <tr><td class="when">2027年6月24日</td><td>💺 回程揀位（CX234）</td><td>回程前 48 小時免費</td></tr>
-            <tr><td class="when">毋須預訂</td><td>佛羅倫斯⇄比薩區域車 · 瑞士短程車 · Iseltwald 巴士</td><td>現場買飛即可</td></tr>
+            <tr><td class="when">毋須預訂</td><td>佛羅倫斯⇄比薩區域車 · 瑞士短程車同湖船 · Malpensa Express</td><td>現場或當日用 app 買即可（逐程清單睇下面「🚆 逐程火車清單」）</td></tr>
           </tbody>
         </table>
       </div>
@@ -443,7 +477,8 @@
 
 2/2　 烏菲茲＋瓦薩里走廊、Accademia
 3/12　少女峰（搶朝早場）
-3/18　意大利火車 5 程（窗口一開即訂）
+12/18　Visp→米蘭 EC（最早可訂）
+3/18　意大利國內火車 4 程（一上線即訂）
 3/22　比薩斜塔（48 鐘內賣曬）
 3/23　《最後的晚餐》19:00 ⚠️ 最難搶
 　　　網上一次最多 5 張，8 個人要分單
@@ -453,7 +488,7 @@
 5/23　鬥獸場 ＋ 萬神殿
 
 ⚠️ 6/12 係歐洲火車換季日，我哋啲車全部喺換季之後，
-訂票窗口可能由 4 個月縮到得 30 日。
+訂票窗口可能由 90–120 日縮到最短 30 日。
 2 月起每兩星期 check 一次。
 
 📅 日曆提醒檔（23 個，import 入手機就唔使記）：
@@ -482,7 +517,6 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
 
         <div class="item move reveal">
           <div class="card">
-            <img class="dayphoto" src="images/day01.jpg" alt="琉森 卡貝爾橋" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 1</span><span class="date">6月11日 · 週五</span><span class="citytag">抵達 → 格林德瓦</span></div>
             <h3>落機直去格林德瓦 ➔ Lauterbrunnen 谷 💧</h3>
             <div class="transport"><span>🚄</span> 蘇黎世 <span class="arw">→</span> 格林德瓦 <span class="arw">→</span> Lauterbrunnen <span class="arw">→</span> Wengen</div>
@@ -547,9 +581,11 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
             <img class="dayphoto" src="images/day04.jpg" alt="策馬特 · 馬特洪峰" loading="lazy" decoding="async" width="1600" height="900">
             <div class="card-top"><span class="day">DAY 4</span><span class="date">6月14日 · 週一</span><span class="citytag">格林德瓦 → 策馬特</span></div>
             <h3>轉場策馬特 ➔ 馬特洪峰金頂日落 🌄</h3>
-            <div class="transport"><span>🚄</span> 格林德瓦 <span class="arw">→</span> 茵特拉肯 <span class="arw">→</span> Spiez <span class="arw">→</span> Visp <span class="arw">→</span> 策馬特</div>
+            <div class="transport"><span>🚄</span> 格林德瓦 <span class="arw">→</span> 茵特拉肯 <span class="arw">→</span> Spiez <span class="arw">→</span> Lötschberg 山線 <span class="arw">→</span> Brig <span class="arw">→</span> 策馬特</div>
             <ul class="acts">
-              <li>朝早 check out，火車去<b>策馬特</b>（約 3 小時，經 Spiez、Visp）</li>
+              <li>朝早 check out，火車去<b>策馬特</b>（約 3.5 小時）</li>
+              <li>🏔️ Spiez 轉 <b>RE 慢車行 Lötschberg 舊山線</b>（經 Kandersteg），唔鑽 34 公里長隧道，一路望住山谷同 Kander 河——<b>免費觀光列車</b>，唔使訂位、唔使加錢</li>
+              <li>喺 <b>Brig</b> 轉 MGB 紅色小火車上策馬特（唔使去 Visp）</li>
               <li>下午入 <b>Hotel Butterfly</b> check-in</li>
               <li>🛒 超市買野（策馬特物價高，買定水同零食）</li>
               <li>🌄 黃昏行去 <b>Kirchbrücke 橋</b>——經典馬特洪峰打卡位，<b>日落 21:21</b></li>
@@ -636,7 +672,7 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
             </ul>
             <div class="pin">🕗 <b>三樣一日做晒係得，但一定要朝早出發。</b> Burano 擺朝早（人少、光靚）、總督宮訂 <b>14:00 之後</b>留 buffer、貢多拉擺最後食黃昏。</div>
             <div class="pin">🎟️ 要預先訂：<b>總督宮 timed entry</b> · <b>貢多拉 8 人要 2 隻船</b>（每隻上限 5 人，官方價約 €90／30 分鐘，19:00 後 €110，認住官方碼頭）· <b>ACTV 24 小時船票約 €25</b>（單程散票 €9.50，今日最少搭 4 程）</div>
-            <div class="pin">👥 細佬同女朋友由呢日開始 join，威尼斯之後就係 <b>8 個人</b></div>
+            <div class="pin">👥 細佬同女朋友<b>尋日（6月16日）</b>已經喺威尼斯 join，由今日起係 <b>8 個人</b></div>
             <div class="stay"><span class="lbl">宿</span> 威尼斯 <span class="badge">第 2 晚 · 2日2夜 🌟</span></div>
           </div>
         </div>
@@ -790,7 +826,7 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
             <div class="transport"><span>🚄</span> 羅馬 <span class="arw">→</span> 米蘭 · 高鐵約 3 小時</div>
             <ul class="acts">
               <li>朝早搭高鐵直上<b>米蘭</b></li>
-              <li>下午參觀<b>米蘭大教堂</b>同<b>艾曼紐二世迴廊</b></li>
+              <li>下午行 <b>Duomo 廣場</b>睇大教堂外觀，再行<b>艾曼紐二世迴廊</b>（入大教堂＋上天台留返聽日，Duomo Pass 訂咗 6月25日）</li>
               <li>🍹 夜晚去 <b>Navigli 運河區</b> 飲 aperitivo——米蘭人夜蒲地，<b>日落 21:16</b>，成條運河好熱鬧</li>
             </ul>
             <div class="stay"><span class="lbl">宿</span> 米蘭 <span class="badge">第 1 晚</span></div>
@@ -924,49 +960,181 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
     <section>
       <div class="leg-head reveal">
         <div class="kicker">實用資訊 · 交通</div>
-        <h2>🎫 火車購票攻略</h2>
+        <h2>🚆 逐程火車清單</h2>
+      </div>
+
+      <div class="tip reveal">
+        <span class="emo">🎯</span>
+        <div class="body"><strong>成程旅行主要靠火車。</strong>以下由第一程排到最後一程，每程都 mark 咗<span class="hl">要唔要預先訂、要買幾多張</span>。紅色嗰 6 程一定要預先訂，其餘大部分當日用 app 買就得。</div>
+      </div>
+
+      <div class="tally reveal">
+        <div class="t must"><div class="n">6 程</div><div class="l">🔴 一定要預先訂<br>我哋共 <b>36 張</b>（連細佬 42）</div></div>
+        <div class="t early"><div class="n">2 程</div><div class="l">🟡 早買平啲<br>唔買都上到車</div></div>
+        <div class="t walk"><div class="n">12 程</div><div class="l">🟢 當日買<br>SBB／Trenitalia app</div></div>
+      </div>
+
+      <div class="legkey reveal">
+        <span><span class="tk must">🔴 要訂</span> 一定要預先訂</span>
+        <span><span class="tk early">🟡 早買</span> 早買有平飛／慳排隊</span>
+        <span><span class="tk walk">🟢 當日</span> 當日買就得</span>
+        <span><b>6＋2</b> = 我哋 6 個＋細佬兩個（佢哋自己買定一齊買，要夾好）</span>
+      </div>
+
+      <div class="legs reveal">
+        <div class="legs-country">🇨🇭 瑞士段 · 6 張 · 全部用半價卡</div>
+
+        <div class="leg">
+          <div class="ld">6月11日<small>週五</small></div>
+          <div class="lr">蘇黎世機場 <span class="arw">→</span> 格林德瓦 <span class="via">（Bern、Interlaken Ost 轉車）</span></div>
+          <div class="lq"><span class="tk early">🟡 早買</span><span class="qty">6 張</span></div>
+          <div class="lm">約 2h45。唔使訂位。<b>Supersaver 最早 2027年4月12日</b>（60 日前）開賣，可以同半價卡疊用；但綁定班次，CX383 一延誤就作廢——要買就買 <b>Supersaver Flex</b>（開車前可以喺 app 退）。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月11日</div>
+          <div class="lr">格林德瓦 <span class="arw">→</span> Lauterbrunnen <span class="arw">→</span> Wengen <span class="via">來回</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">Zweilütschinen 轉車。去睇 Staubbach 瀑布。</div>
+        </div>
+
+        <div class="leg key">
+          <div class="ld">6月12日<small>週六</small></div>
+          <div class="lr">格林德瓦 Terminal <span class="arw">→</span> 少女峰 <span class="via">（Eiger Express）</span><br>少女峰 <span class="arw">→</span> Kleine Scheidegg <span class="arw">→</span> Lauterbrunnen <span class="arw">→</span> Interlaken Ost</div>
+          <div class="lq"><span class="tk must">🔴 要訂</span><span class="qty">6 張</span></div>
+          <div class="lm"><b>3月12日</b>喺 jungfrau.ch 搶<b>朝早時段</b>。座位預約 CHF 10／人，只可以網上訂。落單揀「上 Eiger Express、落經 Lauterbrunnen 去 Interlaken Ost」，咁下晝就直接接圖恩。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月12日</div>
+          <div class="lr">Interlaken Ost <span class="arw">→</span> 圖恩 Thun</div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">約 30 分鐘。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月12日</div>
+          <div class="lr">⛵ 圖恩 <span class="arw">→</span> 奧伯霍芬 <span class="arw">→</span> Spiez <span class="via">（湖船）</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">BLS 船，半價卡有半價，碼頭或 app 買。<b>一定要由圖恩開出</b>先經奧伯霍芬。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月12日</div>
+          <div class="lr">Spiez <span class="arw">→</span> Interlaken Ost <span class="arw">→</span> 格林德瓦</div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">17:00 開，約 18:15 到。</div>
+        </div>
+
+        <div class="leg">
+          <div class="ld">6月13日<small>週日</small></div>
+          <div class="lr">🚠 格林德瓦 <span class="arw">⇄</span> First <span class="via">（纜車來回）</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">Cliff Walk。纜車站買。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月13日</div>
+          <div class="lr">格林德瓦 <span class="arw">→</span> Interlaken Ost</div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">約 35 分鐘。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月13日</div>
+          <div class="lr">⛵ Interlaken Ost <span class="arw">→</span> Iseltwald <span class="arw">→</span> Giessbach <span class="arw">→</span> 布里恩茨 <span class="via">（湖船）</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">碼頭就喺 Interlaken Ost 車站後面。中途喺 Iseltwald 落船再上下一班，買到布里恩茨嘅單程飛可以中途落船。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月13日</div>
+          <div class="lr">布里恩茨 <span class="arw">→</span> Interlaken Ost <span class="arw">→</span> 格林德瓦</div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">（Brienz–Rothorn 蒸氣火車係<b>選擇性</b>，班次少；決定去就早幾日網上留位。）</div>
+        </div>
+
+        <div class="leg">
+          <div class="ld">6月14日<small>週一</small></div>
+          <div class="lr">格林德瓦 <span class="arw">→</span> Interlaken Ost <span class="arw">→</span> Spiez <span class="arw">→</span> 🏔️ Lötschberg 山線 <span class="arw">→</span> Brig <span class="arw">→</span> 策馬特</div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">約 3.5h、轉 3 次車。Spiez 揀 <b>RE 慢車（經 Kandersteg、Goppenstein）</b>行舊山線，當免費觀光列車。⚠️ <b>唔好買 Supersaver</b>——佢綁死行隧道嗰班；買普通半價飛，當日 app 買就得。</div>
+        </div>
+
+        <div class="leg">
+          <div class="ld">6月15日<small>週二</small></div>
+          <div class="lr">🚞 策馬特 <span class="arw">⇄</span> Gornergrat <span class="via">（中途 Rotenboden 落車）</span></div>
+          <div class="lq"><span class="tk early">🟡 早買</span><span class="qty">6 張</span></div>
+          <div class="lm">買<b>來回飛</b>，准中途上落。唔使訂位，但網上買定就唔使喺車站排隊。</div>
+        </div>
+        <div class="leg">
+          <div class="ld">6月15日</div>
+          <div class="lr">🚠 策馬特 <span class="arw">⇄</span> Sunnegga <span class="via">（地底纜車來回）</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">另一張飛，Gornergrat 張飛用唔到。</div>
+        </div>
+
+        <div class="legs-country">🇮🇹 跨國 + 意大利段</div>
+
+        <div class="leg key">
+          <div class="ld">6月16日<small>週三</small></div>
+          <div class="lr">策馬特 <span class="arw">→</span> Visp <span class="arw">→</span> 米蘭中央站 <span class="via">（EuroCity，經辛普朗隧道）</span></div>
+          <div class="lq"><span class="tk must">🔴 要訂</span><span class="qty">6 張</span></div>
+          <div class="lm"><b>2026年12月18日</b>起喺 SBB 買一張「Zermatt → Milano Centrale」連訂位（策馬特–Visp 段有半價）。EC 喺意大利<b>一定要訂位</b>。越早買 Supersaver 越平。</div>
+        </div>
+        <div class="leg key">
+          <div class="ld">6月16日</div>
+          <div class="lr">米蘭中央站 <span class="arw">→</span> 威尼斯 Santa Lucia</div>
+          <div class="lq"><span class="tk must">🔴 要訂</span><span class="qty">6 張</span></div>
+          <div class="lm">約 2.5h，Trenitalia／Italo 格價。⚠️ 同 EC 係<b>兩張分開嘅飛</b>，EC 遲到唔會幫你改——揀 <b>EC 預定到站後最少 60–90 分鐘</b>嘅班次。</div>
+        </div>
+
+        <div class="leg key">
+          <div class="ld">6月18日<small>週五</small></div>
+          <div class="lr">威尼斯 Santa Lucia <span class="arw">→</span> 佛羅倫斯 SMN</div>
+          <div class="lq"><span class="tk must">🔴 要訂</span><span class="qty">6<span class="plus">＋2</span> 張</span></div>
+          <div class="lm">約 2h。揀朝早 9–10 點左右班次，晏晝先趕得切中央市場 lunch 同 14:00 烏菲茲。</div>
+        </div>
+
+        <div class="leg">
+          <div class="ld">6月20日<small>週日</small></div>
+          <div class="lr">佛羅倫斯 SMN <span class="arw">⇄</span> 比薩 Centrale <span class="via">（區域車來回）</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6<span class="plus">＋2</span> × 2 程</span></div>
+          <div class="lm">約 1h，固定價、唔會賣晒。08:30 出發。紙飛上車前要打卡；app 買嘅要喺 app check-in。</div>
+        </div>
+
+        <div class="leg key">
+          <div class="ld">6月21日<small>週一</small></div>
+          <div class="lr">佛羅倫斯 SMN <span class="arw">→</span> 羅馬 Termini</div>
+          <div class="lq"><span class="tk must">🔴 要訂</span><span class="qty">6<span class="plus">＋2</span> 張</span></div>
+          <div class="lm">約 1.5h。酒店 10:30 前退房，揀 11:00 前後嘅班次就唔使趕。</div>
+        </div>
+
+        <div class="leg key">
+          <div class="ld">6月24日<small>週四</small></div>
+          <div class="lr">羅馬 Termini <span class="arw">→</span> 米蘭中央站</div>
+          <div class="lq"><span class="tk must">🔴 要訂</span><span class="qty">6<span class="plus">＋2</span> 張</span></div>
+          <div class="lm">約 3h。朝早班次，下晝喺米蘭行 Duomo 廣場同迴廊。</div>
+        </div>
+
+        <div class="leg">
+          <div class="ld">6月26日<small>週六</small></div>
+          <div class="lr">米蘭中央站 <span class="arw">→</span> Malpensa 機場 <span class="via">（Malpensa Express）</span></div>
+          <div class="lq"><span class="tk walk">🟢 當日</span><span class="qty">6 張</span></div>
+          <div class="lm">約 50 分鐘，固定價。酒店就喺車站正門口。</div>
+        </div>
       </div>
 
       <div class="reveal">
         <div class="tip">
-          <span class="emo">🇨🇭</span>
-          <div class="body"><strong>瑞士段：計一計 Swiss Travel Pass 抵唔抵。</strong> 連續 6／8 日 pass 包晒火車、巴士、遊船，好多博物館免費入；上少女峰、Gornergrat 呢類登山鐵路<span class="hl">有折（唔係全免）</span>。你瑞士段密食火車＋兩個大 excursion，好大機會抵過逐程買。另一選擇係 <strong>Half Fare Card 半價卡</strong>，所有嘢半價。買前用 SBB 官網逐程加埋比較。</div>
-        </div>
-        <div class="tip">
-          <span class="emo">🏔️</span>
-          <div class="body"><strong>兩個登山大位要早訂：</strong> 少女峰 (Jungfraujoch) 同 Gornergrat 票價貴、旺季有人流管制，<span class="hl">連 pass 折扣一齊喺官網預約時段</span>最穩陣。</div>
+          <span class="emo">🗓️</span>
+          <div class="body"><strong>紅色 6 程幾時訂：</strong><br>
+            · <span class="hl">2026年12月18日</span>　策馬特 → 米蘭 EC（SBB，最早開窗）<br>
+            · <span class="hl">2027年3月12日</span>　少女峰（jungfrau.ch，搶朝早場）<br>
+            · <span class="hl">2027年2月1日起</span>　每兩星期 check 意大利國內 4 程，<b>一上線即刻訂</b>（目標 3月18日）<br>
+            · <span class="hl">2027年5月17日</span>　🔴 死線，未訂嘅今日一定要訂</div>
         </div>
         <div class="tip">
           <span class="emo">🇮🇹</span>
-          <div class="body"><strong>意大利高鐵：愈早訂愈平。</strong> 米蘭→威尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭，連跨國 EC 共<span class="hl">五程要訂</span>，車飛約<span class="hl">出發前 3–4 個月開賣</span>。最平嘅 Super Economy／Economy 會被搶（可平至 €19–29，臨買隨時 €70–90），但綁定車次、不設改退。<strong>Trenitalia 同 Italo</strong> 兩間格價。佛羅倫斯⇄比薩就係普通區域車，<span class="hl">毋須預訂</span>，現場買、上車前打卡就得。</div>
+          <div class="body"><strong>意大利高鐵：愈早愈平，但買咗就改唔到。</strong> Super Economy 低至 €19–29，臨買 €70–90。<strong>Trenitalia 同 Italo</strong> 兩間都行晒呢 4 條線，兩邊格價。6月12日歐洲換季，所以窗口可能遲開——2 月見唔到班次係正常。</div>
         </div>
         <div class="tip">
-          <span class="emo">🎟️</span>
-          <div class="body"><strong>景點門票一樣要搶：</strong> <span class="hl">《最後的晚餐》最誇張，3 月尾放飛、分鐘計就爆</span>；比薩斜塔 90 日前、梵蒂岡 60 日前、鬥獸場 30 日前，每樣開賣日都唔同，睇下面時間表。</div>
+          <span class="emo">👥</span>
+          <div class="body"><strong>細佬兩個嘅飛：</strong> 6月18日之後 3 程如果想坐埋一卡，就<span class="hl">一單過買 8 張</span>；佢哋自己買嘅話，記得同一班車、同一個 carriage。</div>
         </div>
-      </div>
-
-      <div class="table-wrap reveal">
-        <table class="tt">
-          <thead>
-            <tr><th>路段</th><th>幾時訂</th><th>備註</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>少女峰 Jungfraujoch</td><td class="when">預約時段</td><td>連 Swiss Pass / 半價卡折扣，官網揀時段</td></tr>
-            <tr><td>Gornergrat 齒軌</td><td class="when">旺季早買</td><td>持 pass 有折；可現場但五月人多</td></tr>
-            <tr><td>Visp → 米蘭（EC 跨國）</td><td class="when">3–4 個月前</td><td>經辛普朗隧道；Domodossola–米蘭段需訂位</td></tr>
-            <tr><td>米蘭 → 威尼斯</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 2.5h</td></tr>
-            <tr><td>威尼斯 → 佛羅倫斯</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 2h</td></tr>
-            <tr><td>佛羅倫斯 ⇄ 比薩（即日來回）</td><td class="when">毋須預訂</td><td>區域車，各約 1h，現場買飛即可</td></tr>
-            <tr><td>佛羅倫斯 → 羅馬</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 1.5h</td></tr>
-            <tr><td>羅馬 → 米蘭</td><td class="when">3–4 個月前</td><td>Frecciarossa／Italo · 約 3h</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="tip reveal" style="margin-top:12px">
-        <span class="emo">🚉</span>
-        <div class="body">市內短程同區域車（去 Spiez、Interlaken ↔ Grindelwald、佛羅倫斯 ↔ 比薩、機場快線等）<span class="hl">唔使預訂</span>，準時上車即可。</div>
       </div>
     </section>
 
@@ -983,9 +1151,9 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
             <tr><th>地區</th><th>時期</th><th>日間氣溫</th><th>重點</th></tr>
           </thead>
           <tbody>
-            <tr><td>瑞士山谷／市鎮<br>格林德瓦 · 策馬特村</td><td class="when">6 月下旬</td><td>12–22°C</td><td>溫暖企理，早晚仍涼</td></tr>
+            <tr><td>瑞士山谷／市鎮<br>格林德瓦 · 策馬特村</td><td class="when">6月11日–15日</td><td>12–22°C</td><td>溫暖企理，早晚仍涼</td></tr>
             <tr><td>瑞士高山頂<br>少女峰 · Gornergrat 冰川平台</td><td class="when">全年</td><td>−5 至 5°C</td><td>常年低溫有雪（冰川），纜車頂記得著羽絨</td></tr>
-            <tr><td>意大利<br>威尼斯 · 佛 · 羅馬</td><td class="when">6月尾–7月頭</td><td>22–30°C</td><td>開始入夏，正午好曬，記得防曬</td></tr>
+            <tr><td>意大利<br>威尼斯 · 佛 · 羅馬 · 米蘭</td><td class="when">6月16日–26日</td><td>22–30°C</td><td>開始入夏，正午好曬，記得防曬</td></tr>
           </tbody>
         </table>
       </div>
@@ -1013,7 +1181,7 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
         </div>
         <div class="tip">
           <span class="emo">🌬️</span>
-          <div class="body"><strong>冷氣？瑞士唔使，意大利先要。</strong> 格林德瓦（1,034m）同策馬特（1,608m）六月尾夜晚得 <span class="hl">5–10°C</span>，要蓋被多過要冷氣，山區酒店傳統上都冇冷氣。<b>帶部 USB 小風扇</b>傍身就夠，慳返幾萬蚊唔使揀「有冷氣」嗰啲貴房。意大利段 30°C+ 就真係要冷氣 —— <span class="hl">四間已訂酒店全部確認有 A/C ✅</span></div>
+          <div class="body"><strong>冷氣？瑞士唔使，意大利先要。</strong> 格林德瓦（1,034m）同策馬特（1,608m）六月中夜晚得 <span class="hl">5–10°C</span>，要蓋被多過要冷氣，山區酒店傳統上都冇冷氣。<b>帶部 USB 小風扇</b>傍身就夠，慳返幾萬蚊唔使揀「有冷氣」嗰啲貴房。意大利段 30°C+ 就真係要冷氣 —— <span class="hl">威尼斯、佛羅倫斯、米蘭已確認有 A/C ✅；羅馬 Genova 入住前再問一次</span></div>
         </div>
         <div class="tip">
           <span class="emo">💧</span>
@@ -1053,7 +1221,7 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
         <div class="tip">
           <span class="emo">💳</span>
           <div class="body"><strong>大額一次性（每人，參考）：</strong><br>
-            · 來回機票 <span class="hl">經濟 HK$8,000–10,500 ／ 特選經濟 HK$16,000–20,000</span>（現時參考價，未訂）<br>
+            · 來回機票 <span class="hl">經濟 HK$8,000–10,500 ／ 特選經濟 HK$16,000–20,000</span>（已訂，以下係當時參考價）<br>
             · Swiss Travel Pass／半價卡 ~HK$1,500–2,800<br>
             · 登山飛（少女峰＋Gornergrat）~HK$1,800–2,800<br>
             · 意大利高鐵（米蘭→威尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭）~HK$900–1,700<br>
@@ -1064,7 +1232,7 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
         </div>
         <div class="tip">
           <span class="emo">🧮</span>
-          <div class="body"><strong>連機票每人粗略總數：</strong> <span class="hl">經濟艙約 HK$31,000–47,500</span> ／ <span class="hl">特選經濟約 HK$39,000–57,000</span>（未計購物，視乎住宿檔次）。機票用現時參考價估算，實際以出發前查到嘅價錢為準。</div>
+          <div class="body"><strong>連機票每人粗略總數：</strong> <span class="hl">經濟艙約 HK$31,000–47,500</span> ／ <span class="hl">特選經濟約 HK$39,000–57,000</span>（未計購物，視乎住宿檔次）。機票已訂，以實際訂單金額為準。</div>
         </div>
       </div>
     </section>
@@ -1120,7 +1288,7 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
         </table>
       </div>
 
-      <div class="fare-note shared" style="border:1px solid var(--line); border-radius:16px; padding:12px 18px">✅ 意大利段四間酒店已經 <b>Booking.com 確認訂咗</b>，3間房，價錢係實際確認總價（唔再係參考價）。瑞士段兩間就仲係已選定、尚未落實訂咗。</div>
+      <div class="fare-note shared" style="border:1px solid var(--line); border-radius:16px; padding:12px 18px">✅ <b>六間酒店全部已訂</b>，每間 3 間房，價錢係實際確認總價。瑞士兩間、威尼斯、佛羅倫斯經 Booking.com；羅馬、米蘭經 Agoda。</div>
     </section>
 
 
@@ -1133,7 +1301,6 @@ https://marconip2023.github.io/swiss-italy-2027/</pre>
       <div class="fare-note shared reveal" style="border:1px solid var(--line); border-radius:16px; padding:14px 18px">
       全部相片來自 <b>Wikimedia Commons</b>，採用自由授權（CC BY／CC BY-SA／公有領域）。
       <ul style="margin:10px 0 0 18px; line-height:1.9; font-size:.82rem">
-        <li>Day 1 · 琉森 卡貝爾橋 — <a href="https://commons.wikimedia.org/wiki/File:Kapellbruecke.JPG">Kapellbruecke.JPG</a>，Simon Koopmann，CC BY-SA 2.5</li>
         <li>Day 2 · 少女峰 — <a href="https://commons.wikimedia.org/wiki/File:Sphinx_et_Jungfrau_-_img_06980.jpg">Sphinx_et_Jungfrau_-_img_06980.jpg</a>，Pmau，CC BY-SA 4.0</li>
         <li>Day 3 · Iseltwald 布里恩茨湖 — <a href="https://commons.wikimedia.org/wiki/File:5902_-_Iseltwald.JPG">5902_-_Iseltwald.JPG</a>，Andrew Bossi，CC BY-SA 2.5</li>
         <li>Day 4 · 策馬特 · 馬特洪峰 — <a href="https://commons.wikimedia.org/wiki/File:1_zermatt_evening_2022.jpg">1_zermatt_evening_2022.jpg</a>，Chensiyuan，CC BY-SA 4.0</li>
