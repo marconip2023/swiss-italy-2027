@@ -18,29 +18,68 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:notify-bro@swiss-italy-2027
-DTSTAMP:20260910T000000Z
-DTSTART;TZID=Asia/Hong_Kong:20260911T200000
-DTEND;TZID=Asia/Hong_Kong:20260911T203000
-SUMMARY:🚨 通知細佬+女朋友改期
-DESCRIPTION:行程改成 6/11–6/27。佢哋喺威尼斯 6/16 join（唔
- 係 6/24）。佢哋要自己重訂住宿同機票。\n呢件事拖得越
- 耐，佢哋越貴。
+DTSTAMP:20261124T000000Z
+DTSTART;TZID=Asia/Hong_Kong:20261125T200000
+DTEND;TZID=Asia/Hong_Kong:20261125T203000
+SUMMARY:🚨 通知細佬+女朋友 —— 改行瑞士段
+DESCRIPTION:佢哋淨係請到 7 日假，意大利擺唔落 → 改為
+ 同我哋行晒成個瑞士段：6/11（五）到 6/16（三），瑞士
+  5 晚。\n\n✅ 7 日假夠有突：6/12、6/13 係六日，實際只
+ 用 5 日假（6/11、14、15、16、17），仲剩 2 日。\n\n【佢
+ 哋要自己訂】\n1. 🔴 格林德瓦 3 晚（6/11–6/14）—— 
+ 我哋嗰間 Apartment Renata 係成個 6 人公寓，加唔到人，一
+ 定要自己訂。6 月旺季，越快越好。\n2. 策馬特（6/14–6
+ /16）—— 我幫手問 Hotel Butterfly 加多 1 間房。\n3. ✈️ 
+ 機票：買【蘇黎世來回】，唔好買米蘭走 —— 6/16 去
+ 米蘭要經 Simplon 修路段，趕唔到機就大鑊。香港⇄蘇黎
+ 世有直飛，13 個鐘。\n4. Swiss Half Fare Card ×2，3/10 前買
+ ，開始日揀 6/11。\n\n【我幫佢哋一齊買】\n🚠 少女峰 
+ —— 3/12 開賣，一單過買 8 張，先確保同一個時段。\n\
+ n⚠️ 拖得越耐佢哋機票同住宿越貴。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🚨 通知細佬+女朋友改期
+DESCRIPTION:🚨 通知細佬+女朋友 —— 改行瑞士段
 TRIGGER:-P7D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🚨 通知細佬+女朋友改期
+DESCRIPTION:🚨 通知細佬+女朋友 —— 改行瑞士段
 TRIGGER:-P1D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🚨 通知細佬+女朋友改期
+DESCRIPTION:🚨 通知細佬+女朋友 —— 改行瑞士段
 TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:bro-swiss-hotel@swiss-italy-2027
+DTSTAMP:20261124T000000Z
+DTSTART;TZID=Asia/Hong_Kong:20261201T200000
+DTEND;TZID=Asia/Hong_Kong:20261201T203000
+SUMMARY:🏨 跟進細佬兩個嘅瑞士住宿（格林德瓦＋策馬特
+ ）
+DESCRIPTION:🔴 格林德瓦 6/11–6/14（3 晚）—— 我哋嗰間 J
+ ungfrau Lodge Apartment Renata 係「整個 6 人公寓」，塞唔落
+ 多兩個。佢哋要自己訂。可以先問 Jungfrau Lodge 有冇另
+ 一個單位（同一棟最方便）。\n\n🏨 策馬特 6/14–6/16（
+ 2 晚）—— 我哋訂咗 Hotel Butterfly 3 間房，直接 email 問
+ 加多 1 間。同一間酒店加房通常易搞，但 6 月中係馬特
+ 洪峰旺季，唔好等。\n\n⚠️ 瑞士 6 月中住宿一爆就好
+ 難補，呢兩樣係成件事最早要落實嘅。
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏨 跟進細佬兩個嘅瑞士住宿
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏨 跟進細佬兩個嘅瑞士住宿
+TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
@@ -52,12 +91,12 @@ SUMMARY:🚆 Visp → 米蘭 EuroCity 開窗(180 日前,最早可訂)
 DESCRIPTION:6/16(三)。sbb.ch\n\n⚠️ 呢程可以比其他火車早
  成兩個月訂 —— SBB 國際票去意大利開放【180 日前】,
  今日正好開窗。\n\n💰 Supersaver 係最平嘅票種,【越早買
- 折扣越大】,而且賣完即止。所以見到有就買,唔好等。\n
- \n⚠️ Domodossola–米蘭段可能要另外訂位(約 €10),落單
- 時睇清楚。\n\n📌 注意:意大利【國內】4 程(米蘭→威尼
- 斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米蘭)
- 係另一回事 —— 嗰啲受 6/12 歐洲時刻表換季影響,2 月
- 起先至陸續上線,最遲 5/17 要訂晒。
+ 折扣越大】,而且賣完即止。所以見到有就買,唔好等。\
+ n\n⚠️ Domodossola–米蘭段可能要另外訂位(約 €10),落單
+ 時睇清楚。\n\n📌 注意:意大利【國內】4 程(米蘭→威
+ 尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米
+ 蘭)係另一回事 —— 嗰啲受 6/12 歐洲時刻表換季影響,2 
+ 月起先至陸續上線,最遲 5/17 要訂晒。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -78,8 +117,8 @@ DTSTART;TZID=Asia/Hong_Kong:20270105T200000
 DTEND;TZID=Asia/Hong_Kong:20270105T203000
 SUMMARY:🛂 檢查 6 本護照有效期
 DESCRIPTION:申根區要求離境當日（2027-06-27）之後仲有 3 個
- 月有效期，穩陣啲當 6 個月計，即係最少有效到 2027-12-2
- 7。\n有人唔夠期就而家去續，唔好等。
+ 月有效期，穩陣啲當 6 個月計，即係最少有效到 2027-12-
+ 27。\n有人唔夠期就而家去續，唔好等。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -101,11 +140,11 @@ DTEND;TZID=Asia/Hong_Kong:20270202T180000
 SUMMARY:🎨 Uffizi + 瓦薩里走廊 + Accademia 開賣（全年一次
  過放）
 DESCRIPTION:烏菲茲系統通常 2 月初一次過開放全年 4–12 
- 月（2026 年係 2 月 2 日）。\n\n要訂：\n• 6/18（五）14:00 
- Uffizi → 16:00 瓦薩里走廊（合併票約 €47，唔可以分開
- 買，入 Uffizi 要早走廊 2 鐘）\n• 6/19（六）早上 Accademia
-  大衛像\n\n官網 uffizi.it。票係記名、不可轉讓、不設退
- 款。
+ 月（2026 年係 2 月 2 日）。\n\n要訂：\n• 6/18（五）14:00
+  Uffizi → 16:00 瓦薩里走廊（合併票約 €47，唔可以分開
+ 買，入 Uffizi 要早走廊 2 鐘）\n• 6/19（六）早上 Accademi
+ a 大衛像\n\n官網 uffizi.it。票係記名、不可轉讓、不設
+ 退款。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -135,11 +174,11 @@ DTEND;TZID=Asia/Hong_Kong:20270201T093000
 SUMMARY:🚆 開始每兩星期 check 意大利火車（有時刻表換
  季陷阱）
 DESCRIPTION:⚠️ 2027-06-12 係歐洲時刻表換季日（6 月第二
- 個星期六）。我哋 4 程意大利火車（6/16、6/18、6/21、6/24
- ）全部喺換季之後。\n\n換季之後嘅日子，訂票窗口可能
- 由正常 90–120 日縮到最短 30 日。所以 2 月見唔到 6 月
- 中之後嘅班次係正常，唔係網站壞。\n\n做法：2 月起每
- 兩星期 check trenitalia.com 一次，一開就訂。
+ 個星期六）。我哋 4 程意大利火車（6/16、6/18、6/21、6/2
+ 4）全部喺換季之後。\n\n換季之後嘅日子，訂票窗口可
+ 能由正常 90–120 日縮到最短 30 日。所以 2 月見唔到 6 
+ 月中之後嘅班次係正常，唔係網站壞。\n\n做法：2 月起
+ 每兩星期 check trenitalia.com 一次，一開就訂。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -164,16 +203,17 @@ SUMMARY:🚠 少女峰訂飛開窗(正好 3 個月前)—— 搶朝早時
  段
 DESCRIPTION:6/12(六)。jungfrau.ch —— 出發前【3 個月】開賣,
  今日正好開窗。\n\n⚠️ 要早買嘅原因唔係會賣曬,係【
- 搶朝早時段】—— 6 月中山上落晝好易起雲,朝早班次能
- 見度最好,而朝早位最先冇。\n\n【落單要點】\n• 🔴 來
- 回程嘅訂位【只可以網上做】,售票處淨係賣單程訂位\n
- • 強制訂位費 CHF 10/人(5/1–10/31),【唔打折】\n• 兩條
- 路線格一格:Grindelwald Terminal 經 Eiger Express vs 傳統路線 
- —— 6 個人可以差成 HK$4,000\n\n⚠️ 半價卡要 5/20 先買,
- 所以今日落單時如果系統要求出示半價卡,就先買咗卡再
- 訂飛(卡可以提前 11 個月買,隨時買得)。\n\n💡 另一招:
- 可以先買 CHF 10 座位預留,出發前睇實天氣同高山 webcam 
- 先買正票(見 6/10 嗰個提醒)。
+ 搶朝早時段】—— 6 月中山上落晝好易起雲,朝早班次
+ 能見度最好,而朝早位最先冇。\n\n【落單要點】\n• 🔴
+  來回程嘅訂位【只可以網上做】,售票處淨係賣單程訂
+ 位\n• 強制訂位費 CHF 10/人(5/1–10/31),【唔打折】\n• 
+ 兩條路線格一格:Grindelwald Terminal 經 Eiger Express vs 傳統
+ 路線 —— 8 個人可以差成 HK$5,300\n\n🔴 今次要買【8 張
+ 】—— 連細佬＋女朋友。一單過買，先確保 8 個人同
+ 一個時段。\n\n✅ 半價卡 3/10 已經買定（8 張），所以
+ 今日落單直接揀到「半價」。\n\n💡 另一招:可以先買 C
+ HF 10 座位預留,出發前睇實天氣同高山 webcam 先買正票(
+ 見 6/10 嗰個提醒)。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -199,12 +239,12 @@ DTSTART;TZID=Asia/Hong_Kong:20270318T090000
 DTEND;TZID=Asia/Hong_Kong:20270318T103000
 SUMMARY:🚆 火車：目標訂票日（如果班次已上線）
 DESCRIPTION:如果 6/16 之後嘅班次已經開放，今日就訂晒 4 
- 程：\n• 6/16 Visp→米蘭（EuroCity，經辛普朗）+ 米蘭→威
- 尼斯\n• 6/18 威尼斯→佛羅倫斯\n• 6/21 佛羅倫斯→羅馬
- \n• 6/24 羅馬→米蘭\n\n⚠️ Domodossola–米蘭段可能要另
- 外訂位（約 €10），落單時睇清楚。\n💡 Visp→米蘭嗰
- 程可以試 SBB 網站，瑞士方面通常開得早啲。\n\n早訂 €
- 15–29／人，臨急 €70–90。6 人差成千幾蚊。
+ 程：\n• 6/16 Visp→米蘭（EuroCity，經辛普朗）+ 米蘭→
+ 威尼斯\n• 6/18 威尼斯→佛羅倫斯\n• 6/21 佛羅倫斯→
+ 羅馬\n• 6/24 羅馬→米蘭\n\n⚠️ Domodossola–米蘭段可能
+ 要另外訂位（約 €10），落單時睇清楚。\n💡 Visp→米
+ 蘭嗰程可以試 SBB 網站，瑞士方面通常開得早啲。\n\n早
+ 訂 €15–29／人，臨急 €70–90。6 人差成千幾蚊。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -265,9 +305,9 @@ DTSTART;TZID=Asia/Hong_Kong:20270322T150000
 DTEND;TZID=Asia/Hong_Kong:20270322T153000
 SUMMARY:🗼 比薩斜塔爬塔開賣（正好 90 日前）
 DESCRIPTION:opapisa.it/en/tickets/buy —— 只此一家官方價 €20
- （塔+主教座堂）。\n⚠️ 6–8 月週末嘅早上時段，90 日
- 窗口一開 48 小時內就會賣曬。6/20 係星期日，一定要即
- 日搶。\n其他網站全部係二手加價。
+ （塔+主教座堂）。\n⚠️ 6–8 月週末嘅早上時段，90 
+ 日窗口一開 48 小時內就會賣曬。6/20 係星期日，一定要
+ 即日搶。\n其他網站全部係二手加價。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -295,11 +335,12 @@ SUMMARY:🖼️ 《最後的晚餐》開賣 —— 全程最難搶（12:0
  0 意大利時間）
 DESCRIPTION:6/25（五）。cenacolovinciano.org 每三個月放一次飛
  ，5–8 月嗰季一般係 3 月尾星期二中午 12:00 開賣（2026 
- 年就係 3/24 星期二）。\n香港時間 19:00（3 月底歐洲未轉
- 夏令時）。\n\n• 網上 lastsupper.shop —— 最多 5 張\n• 
- 電話 +39 02 92800360 —— 最多 9 張\n我哋 8 個人 → 網上買
- 唔曬，要分兩單或者打電話。\n\n⏰ 提早 15 分鐘開定電
- 腦、login 定、信用卡擺喺手邊。分鐘計就賣曬。
+ 年就係 3/24 星期二）。\n香港時間 19:00（3 月底歐洲未
+ 轉夏令時）。\n\n• 網上 lastsupper.shop —— 最多 5 張\n
+ • 電話 +39 02 92800360 —— 最多 9 張\n我哋得返 6 個人（
+ 細佬兩個唔去意大利）→ 打電話可以一次過買 6 張；
+ 網上就要分兩單（5＋1）。\n\n⏰ 提早 15 分鐘開定電腦
+ 、login 定、信用卡擺喺手邊。分鐘計就賣曬。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -382,10 +423,10 @@ DTSTART;TZID=Asia/Hong_Kong:20270401T200000
 DTEND;TZID=Asia/Hong_Kong:20270401T203000
 SUMMARY:🏛️ 總督宮 Doge's Palace 訂 14:00 時段
 DESCRIPTION:6/17（四）威尼斯。palazzoducale.visitmuve.it\n呢個
- 唔算難搶，但係 timed entry，一定要訂。訂 14:00 或之後，
- 留 buffer 俾 Burano 遲到。\n順手：ACTV 24 小時船票約 €25/
- 人、貢多拉 8 人要 2 隻船（每隻上限 5 人，官方價 €90/
- 30分鐘，19:00 前）。
+ 唔算難搶，但係 timed entry，一定要訂。訂 14:00 或之後
+ ，留 buffer 俾 Burano 遲到。\n順手：ACTV 24 小時船票約 €
+ 25/人、貢多拉 8 人要 2 隻船（每隻上限 5 人，官方價 
+ €90/30分鐘，19:00 前）。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -408,8 +449,8 @@ SUMMARY:⛪ 梵蒂岡博物館開賣（正好 60 日前，歐洲午夜放
  ）
 DESCRIPTION:6/23（三）。museivaticani.va —— 官方 60 日前午
  夜（中歐時間）放飛，即係香港時間今朝 06:00。\n半個
- 鐘一個時段。訂早上時段，落晝好熱好逼。\n6 人一齊訂
- 。
+ 鐘一個時段。訂早上時段，落晝好熱好逼。\n6 人一齊
+ 訂。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -440,8 +481,8 @@ SUMMARY:🏨 最後一次諗要唔要換酒店 + 買旅遊保險
 DESCRIPTION:六間酒店全部免費取消到入住前約 3 日，但拖
  到最後先換就冇好嘢揀。\n\n提提你：佛羅倫斯 la Scala 
  已包早餐 + 係全程唯一「冷氣＋雪櫃＋熱水煲」三樣齊
- 嘅酒店，扣返早餐其實唔貴，換之前計清楚。\n\n同埋今
- 次買旅遊保險（4 位長輩，醫療保額睇清楚）。
+ 嘅酒店，扣返早餐其實唔貴，換之前計清楚。\n\n同埋
+ 今次買旅遊保險（4 位長輩，醫療保額睇清楚）。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -462,8 +503,8 @@ DTSTART;TZID=Asia/Hong_Kong:20270517T090000
 DTEND;TZID=Asia/Hong_Kong:20270517T100000
 SUMMARY:🚆🔴 火車最後死線 —— 6/16 前 30 日
 DESCRIPTION:就算時刻表換季令窗口縮到最短 30 日，今日都
- 一定開咗。\n如果到今日 4 程仲有邊程未訂 —— 今日訂
- 。再拖落去就係貴同冇位。
+ 一定開咗。\n如果到今日 4 程仲有邊程未訂 —— 今日
+ 訂。再拖落去就係貴同冇位。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -487,33 +528,36 @@ UID:halffare@swiss-italy-2027
 DTSTAMP:20261001T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20270310T200000
 DTEND;TZID=Asia/Hong_Kong:20270310T204500
-SUMMARY:🇨🇭 買 Swiss Half Fare Card × 6(少女峰搶飛前兩日)
+SUMMARY:🇨🇭 買 Swiss Half Fare Card × 8(少女峰搶飛前兩日)
 DESCRIPTION:🔴 一定要喺 3/12 少女峰搶飛【之前】買起,先
  至揀得到「半價」。\n\n官方規則係:買折扣票嗰陣唔需
- 要已經持有半價卡,旅行當日有效就得。但早買冇任何代
- 價(價錢一樣、開始日另外揀),所以唔值得喺搶飛當日先
- 賭個結帳系統。\n\n【買咩】Swiss Half Fare Card,CHF 150/人 × 
- 6 = CHF 900 ≈ HK$8,685\n【喺邊買】sbb.ch 或 swissrailways.com,PDF
- ／手機票即時收\n🔴【最緊要】有效期一個月,開始日自
- 己揀 —— 要揀 2027-06-11(抵達蘇黎世嗰日),唔好用落單嗰
- 日做開始日,系統預設會揀錯。\n(可提前約 180 日買,即 20
- 26 年 12 月中已經買得,今日買實穩陣。)\n\n【點解唔買 ST
- P】已逐程計過:半價卡贏 Swiss Travel Pass,6 人慳 HK$4,554–6,
- 560。STP 貴 CHF 249,但我哋全程點對點車船全票先 CHF 391,補
- 唔返差價;而且少女峰 STP 得 25% 折、半價卡有 50%。\n\n【
- 買完即刻做】3/12 少女峰搶飛(揀半價),之後 gornergrat.ch 
- 買 6/15 來回 e-ticket。\n⚠️ 上車要帶得出半價卡本身,查
- 票會睇。
+ 要已經持有半價卡,旅行當日有效就得。但早買冇任何
+ 代價(價錢一樣、開始日另外揀),所以唔值得喺搶飛當日
+ 先賭個結帳系統。\n\n【買咩】Swiss Half Fare Card,CHF 150/人
+  × 8 = CHF 1,200 ≈ HK$11,580\n🔴 今次係 8 張 —— 細佬＋
+ 女朋友改咗行瑞士段,佢哋都要。佢哋自己買都得,但要
+ 記住開始日同樣揀 2027-06-11。\n【喺邊買】sbb.ch 或 swissr
+ ailways.com,PDF／手機票即時收\n🔴【最緊要】有效期一個
+ 月,開始日自己揀 —— 要揀 2027-06-11(抵達蘇黎世嗰日),
+ 唔好用落單嗰日做開始日,系統預設會揀錯。\n(可提前
+ 約 180 日買,即 2026 年 12 月中已經買得,今日買實穩陣。)
+ \n\n【點解唔買 STP】已逐程計過:半價卡贏 Swiss Travel Pass
+ ,每人慳 HK$759–1,093(8 人慳 HK$6,072–8,747)。STP 貴 CHF 249,
+ 但我哋全程點對點車船全票先 CHF 391,補唔返差價;而且
+ 少女峰 STP 得 25% 折、半價卡有 50%。\n\n【買完即刻做】
+ 3/12 少女峰搶飛(揀半價,8 張),之後 gornergrat.ch 買 6/15 來
+ 回 e-ticket(8 張)。\n⚠️ 上車要帶得出半價卡本身,查票
+ 會睇。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🇨🇭 買瑞士交通證 × 6 張
+DESCRIPTION:🇨🇭 買瑞士交通證 × 8 張
 TRIGGER:-P7D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🇨🇭 買瑞士交通證 × 6 張
+DESCRIPTION:🇨🇭 買瑞士交通證 × 8 張
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
@@ -527,11 +571,11 @@ SUMMARY:🏛️ 鬥獸場開賣（30 日前，唔係 60 日！）＋ 萬
 DESCRIPTION:6/22（二）鬥獸場。⚠️ 官方售票 2024/4 已由 Co
  opCulture 轉做 **ticketing.colosseo.it**。\n30 日前放飛，羅馬
  朝早放 = 香港下晝。訂早上時段（下晝冇遮陰，曬到暈
- ）。連 Roman Forum + Palatine Hill 嗰款。\n\n⚠️ 順手訂萬神
- 殿（Pantheon）—— 而家**強制預約**，€7，portale.museiital
- iani.it。\n🔴 萬神殿 19:00 閂、18:30 最後入場 —— 原本
- 行程寫「黃昏去萬神殿」係入唔到嘅，要改訂 17:00–18:0
- 0 時段，或者當淨係喺外面睇。
+ ）。連 Roman Forum + Palatine Hill 嗰款。\n\n⚠️ 順手訂萬
+ 神殿（Pantheon）—— 而家**強制預約**，€7，portale.musei
+ italiani.it。\n🔴 萬神殿 19:00 閂、18:30 最後入場 —— 原
+ 本行程寫「黃昏去萬神殿」係入唔到嘅，要改訂 17:00–
+ 18:00 時段，或者當淨係喺外面睇。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -625,9 +669,9 @@ DTEND;TZID=Asia/Hong_Kong:20270616T183000
 SUMMARY:🖼️ 《最後的晚餐》週三補票（12:00 意大利時間
  ）
 DESCRIPTION:⚠️ 淨係喺 3 月嗰次搶唔到先要做。\n官方逢
- 星期三中午 12:00 放下星期嘅飛（淨係網上）。香港時間
-  18:00。\n今次放嘅係 6/21–6/27 嗰個星期，覆蓋到我哋 6/2
- 5。
+ 星期三中午 12:00 放下星期嘅飛（淨係網上）。香港時
+ 間 18:00。\n今次放嘅係 6/21–6/27 嗰個星期，覆蓋到我哋
+  6/25。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
