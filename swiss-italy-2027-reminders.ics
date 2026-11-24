@@ -22,20 +22,20 @@ DTSTAMP:20261124T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20261125T200000
 DTEND;TZID=Asia/Hong_Kong:20261125T203000
 SUMMARY:🚨 通知細佬+女朋友 —— 改行瑞士段
-DESCRIPTION:佢哋淨係請到 7 日假，意大利擺唔落 → 改為
- 同我哋行晒成個瑞士段：6/11（五）到 6/16（三），瑞士
-  5 晚。\n\n✅ 7 日假夠有突：6/12、6/13 係六日，實際只
- 用 5 日假（6/11、14、15、16、17），仲剩 2 日。\n\n【佢
- 哋要自己訂】\n1. 🔴 格林德瓦 3 晚（6/11–6/14）—— 
- 我哋嗰間 Apartment Renata 係成個 6 人公寓，加唔到人，一
- 定要自己訂。6 月旺季，越快越好。\n2. 策馬特（6/14–6
- /16）—— 我幫手問 Hotel Butterfly 加多 1 間房。\n3. ✈️ 
- 機票：買【蘇黎世來回】，唔好買米蘭走 —— 6/16 去
- 米蘭要經 Simplon 修路段，趕唔到機就大鑊。香港⇄蘇黎
- 世有直飛，13 個鐘。\n4. Swiss Half Fare Card ×2，3/10 前買
- ，開始日揀 6/11。\n\n【我幫佢哋一齊買】\n🚠 少女峰 
- —— 3/12 開賣，一單過買 8 張，先確保同一個時段。\n\
- n⚠️ 拖得越耐佢哋機票同住宿越貴。
+DESCRIPTION:✅ 機票已經格好價(2026/11/24 查):\n去程 6/11(五) 
+ 00:25 香港 → 07:30 蘇黎世 —— 國泰執飛,【同我哋同一
+ 班機】\n回程 6/16(三) 22:30 蘇黎世 → 6/17(四) 16:35 香港 
+ —— 瑞航執飛\n💰 HK$7,339 來回/人(經濟艙連稅,一張單
+ 過),兩個人 ≈ HK$14,678。Google 標住比平時平 HK$2,415。\n\n
+ 📅 請假 5 日:6/11、6/14、6/15、6/16、6/17(6/12、6/13 係六日
+ )。7 日假仲剩 2 日。\n\n🎫 佢哋要自己搞:\n1. 🔴 格林
+ 德瓦 3 晚(6/11–6/14)—— 我哋嗰間 Apartment Renata 係整個 
+ 6 人公寓,加唔到人,最急\n2. 策馬特多 1 間房(6/14–6/16)
+ —— email Hotel Butterfly 問,易搞\n3. ✈️ 機票(上面嗰個
+ 組合)\n4. 🎫 Swiss Half Fare Card ×2,3/10 前買,開始日揀 6/11\
+ n\n🔴 少女峰唔好俾佢哋自己買 —— 3/12 我哋一單過買
+  8 張,先確保同一個時段。\n\n⚠️ 落單前睇清楚行李額
+ (瑞航段同國泰段規則可能唔同)。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -83,30 +83,35 @@ TRIGGER:-P1D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:ec-visp@swiss-italy-2027
-DTSTAMP:20261028T000000Z
-DTSTART;TZID=Asia/Hong_Kong:20261218T210000
-DTEND;TZID=Asia/Hong_Kong:20261218T214500
-SUMMARY:🚆 Visp → 米蘭 EuroCity 開窗(180 日前,最早可訂)
-DESCRIPTION:6/16(三)。sbb.ch\n\n⚠️ 呢程可以比其他火車早
- 成兩個月訂 —— SBB 國際票去意大利開放【180 日前】,
- 今日正好開窗。\n\n💰 Supersaver 係最平嘅票種,【越早買
- 折扣越大】,而且賣完即止。所以見到有就買,唔好等。\
- n\n⚠️ Domodossola–米蘭段可能要另外訂位(約 €10),落單
- 時睇清楚。\n\n📌 注意:意大利【國內】4 程(米蘭→威
- 尼斯、威尼斯→佛羅倫斯、佛羅倫斯→羅馬、羅馬→米
- 蘭)係另一回事 —— 嗰啲受 6/12 歐洲時刻表換季影響,2 
- 月起先至陸續上線,最遲 5/17 要訂晒。
+UID:ec-zrh-ve@swiss-italy-2027
+DTSTAMP:20261124T000000Z
+DTSTART;TZID=Asia/Hong_Kong:20261219T210000
+DTEND;TZID=Asia/Hong_Kong:20261219T214500
+SUMMARY:🚆 蘇黎世 → 威尼斯 EuroCity 開窗(180 日前,最早可
+ 訂)
+DESCRIPTION:6/17(四) 08:33 蘇黎世中央站【月台 8】→ 14:47 威
+ 尼斯 Santa Lucia。sbb.ch\n\n✅ 直達、零轉車、6 小時 14 分,
+ 有餐車。已經喺 SBB 2027 年時刻表確認。\n\n💰 用 2027/5/
+ 13 同一班車試價:Supersaver 由【CHF 76】起(二等,已計半價
+ 卡)。6 人約 CHF 456 ≈ HK$4,400。月曆顯示 CHF 62–84 浮動,6
+  月旺季估計貼近上限。\n\n🔴 Supersaver 指定班次、唔退
+ 唔改 —— 等蘇黎世酒店訂實咗先買。\n\n🚧 原本嗰程
+ 【Visp → 米蘭 EC】已經作廢:SBB 2026 年 7 月確認,2027/6/13
+ –7/22 Domodossola–米蘭完全冇火車;另外 5/24–7/2 Iselle–D
+ omodossola 每日 09:15–17:15 封閉。6/16 同時中晒兩個階段
+ 。\n\n⚠️ 一日只得一班直達,其餘要轉 3–4 次車。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🚆 Visp → 米蘭 EuroCity 開窗
+DESCRIPTION:🚆 蘇黎世 → 威尼斯 EuroCity 開窗(180 日前,最
+ 早可訂)
 TRIGGER:-P7D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:🚆 Visp → 米蘭 EuroCity 開窗
+DESCRIPTION:🚆 蘇黎世 → 威尼斯 EuroCity 開窗(180 日前,最
+ 早可訂)
 TRIGGER:-P1D
 END:VALARM
 END:VEVENT
@@ -137,14 +142,17 @@ UID:uffizi@swiss-italy-2027
 DTSTAMP:20260910T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20270202T170000
 DTEND;TZID=Asia/Hong_Kong:20270202T180000
-SUMMARY:🎨 Uffizi + 瓦薩里走廊 + Accademia 開賣（全年一次
- 過放）
-DESCRIPTION:烏菲茲系統通常 2 月初一次過開放全年 4–12 
- 月（2026 年係 2 月 2 日）。\n\n要訂：\n• 6/18（五）14:00
-  Uffizi → 16:00 瓦薩里走廊（合併票約 €47，唔可以分開
- 買，入 Uffizi 要早走廊 2 鐘）\n• 6/19（六）早上 Accademi
- a 大衛像\n\n官網 uffizi.it。票係記名、不可轉讓、不設
- 退款。
+SUMMARY:🎨 Uffizi + 走廊 + Accademia 開賣 —— 🔴 三樣要同
+ 一日(6/19)
+DESCRIPTION:🔴 改咗:【烏菲茲 + 瓦薩里走廊 同 Accademia 而
+ 家要訂同一日 —— 6月19日(六)】\n\n朝早 Accademia 睇大
+ 衛像,14:00 入烏菲茲,16:00 瓦薩里走廊(最後一團 16:35 離
+ 場)。\n\n原因:6/18 要留返威尼斯朝早做總督宮同聖馬可,
+ 14:00 先開車去佛羅倫斯,16:00 到 —— 趕唔切 14:00 嘅烏
+ 菲茲。\n\n⚠️ 官方係【逐批放飛】,唔係一次過放晒全
+ 年。搶唔到要再 check。\n\n🎟️ 走廊唔可以單買,必須
+ 連烏菲茲(預訂約 €47、即場 €43)。記名、唔退唔轉。\
+ n\n📍 官網 uffizi.it
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -421,12 +429,16 @@ UID:doge@swiss-italy-2027
 DTSTAMP:20260910T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20270401T200000
 DTEND;TZID=Asia/Hong_Kong:20270401T203000
-SUMMARY:🏛️ 總督宮 Doge's Palace 訂 14:00 時段
-DESCRIPTION:6/17（四）威尼斯。palazzoducale.visitmuve.it\n呢個
- 唔算難搶，但係 timed entry，一定要訂。訂 14:00 或之後
- ，留 buffer 俾 Burano 遲到。\n順手：ACTV 24 小時船票約 €
- 25/人、貢多拉 8 人要 2 隻船（每隻上限 5 人，官方價 
- €90/30分鐘，19:00 前）。
+SUMMARY:🏛️ 總督宮 Doge's Palace 訂 🔴 16:00 時段
+DESCRIPTION:6/17(四)。palazzoducale.visitmuve.it\n\n🔴 改咗:訂【1
+ 6:00 或 16:30】(原本寫 14:00)。因為 6/17 要 14:47 先由蘇黎
+ 世坐直達 EC 到威尼斯,放低行李再搭船去聖馬可,大約 15
+ :55 到。\n\n⏰ 開放 4/1–10/31 09:00–19:00,【最後入場 18:00
+ 】,18:30 開始清場。訂 16:00 行足兩個鐘,18:30 仲接得切貢
+ 多拉。\n\n💰 提早【30 日以上】網上買 €30,即場 €35 
+ —— 6 個人慳 €30。其實而家就訂得,冇固定開賣日。\n
+ \n⚠️ 聖馬可大教堂 17:15 就閂,同總督宮撞死,所以大教
+ 堂擺咗去 6/18 朝早 09:30。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -602,11 +614,14 @@ UID:stmarks@swiss-italy-2027
 DTSTAMP:20260910T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20270605T200000
 DTEND;TZID=Asia/Hong_Kong:20270605T203000
-SUMMARY:⛪ 聖馬可大教堂訂 skip-the-line（幾日前訂就夠）
-DESCRIPTION:6/17（四）威尼斯，行程排 16:00。\n約 €3，官
- 網 basilicasanmarco.it。4–10 月唔訂要排 60–90 分鐘。\n⚠
- ️ Skip-the-line 唔會 skip 安全檢查，仲要 20–30 分鐘。攰
- 嘅話呢樣係最易 cut 嘅一項。
+SUMMARY:⛪ 聖馬可大教堂訂 skip-the-line —— 🔄 改咗 6/18 0
+ 9:30
+DESCRIPTION:🔄 改咗:由 6/17 搬去【6月18日(五) 09:30 一開門
+ 入】,約 45 分鐘。\n\n原因:大教堂 17:15 就閂,同 6/17 落午
+  16:00 嘅總督宮撞死。\n\n💰 約 €3,幾日前訂就夠。唔
+ 訂要排 60–90 分鐘。\n\n📅 6/18 當日:09:30 大教堂 → 10:3
+ 0 Rialto 橋同魚市場 → 12:30 返酒店攞喼(行 1 分鐘就到車
+ 站)→ 14:00 高鐵去佛羅倫斯,16:00 到。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -621,11 +636,12 @@ UID:seats-out@swiss-italy-2027
 DTSTAMP:20260910T000000Z
 DTSTART;TZID=Asia/Hong_Kong:20270609T120000
 DTEND;TZID=Asia/Hong_Kong:20270609T123000
-SUMMARY:💺 CX383 揀位（出發前 48 小時免費）
-DESCRIPTION:6/11 香港→蘇黎世。而家免費揀位開放。\n⚠️
-  我要同爸媽坐埋一齊 —— 兩個 PNR（EXL5SX 兌換 / EXUOHJ 
- 同行）要一齊搞。\n順手確認「輕便」票嘅行李額夠唔
- 夠。
+SUMMARY:💺 CX383 揀位 —— 🔴 而家有三個 PNR 要一齊搞
+DESCRIPTION:CX383 6/11(五) 00:25 香港 → 07:30 蘇黎世。出發前 
+ 48 小時免費揀位。\n\n🔴 而家【三個 PNR】:我哋兩個 + 
+ 細佬一個。三張單一齊搞先至坐得埋。\n\n⚠️ 細佬張
+ 單係【瑞航出票、國泰執飛】—— 揀位可能要去國泰
+ 網站用 booking reference 做,唔係喺瑞航度。
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -739,6 +755,70 @@ BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:💺 CX234 揀位（回程前 48 小時）
 TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:zurich-hotel@swiss-italy-2027
+DTSTAMP:20261124T000000Z
+DTSTART;TZID=Asia/Hong_Kong:20261215T200000
+DTEND;TZID=Asia/Hong_Kong:20261215T204500
+SUMMARY:🏨 訂蘇黎世 6/16 一晚(3 間房,一定要免費取消)
+DESCRIPTION:🔄 6/16 改咗喺蘇黎世過夜 —— Simplon 修路已
+ 證實(2027/6/13–7/22 Domodossola–米蘭冇火車)。\n\n📅 6/16(
+ 三) 一晚,3 間房,住【中央站 Zürich HB 附近】。\n\n🔴 一
+ 定要揀【免費取消】—— 2027 年 4–5 月 RFI 出確認版先
+ 落閘。萬一改期、直達車返生,可以甩。\n\n💰 6 月旺季
+ ,3 間房預 CHF 700–1,000(約 HK$6,800–9,700)。蘇黎世供應多,
+ 唔似格林德瓦咁緊,但都唔好拖。\n\n📍 點解住中央站
+ 附近:① 12:58 到就即刻放低喼 ② 舊城、Limmat 河、Bahnhof
+ strasse 全部行得到 ③ 細佬兩個 19:00 由中央站搭火車入
+ 機場,13 分鐘直達。
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏨 訂蘇黎世 6/16 一晚(3 間房,一定要免費取消)
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🏨 訂蘇黎世 6/16 一晚(3 間房,一定要免費取消)
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cancel-mi-ve@swiss-italy-2027
+DTSTAMP:20261124T000000Z
+DTSTART;TZID=Asia/Hong_Kong:20270601T200000
+DTEND;TZID=Asia/Hong_Kong:20270601T204500
+SUMMARY:🔴 取消米蘭 HD8 6/16 + 威尼斯第一晚(6月11日前!)
+DESCRIPTION:🔴 兩樣都要喺【6月11日之前】取消,唔好拖:\n\
+ n1. 米蘭 HD8 6/16 嗰晚(後備用嘅)—— 免費取消到 6/13 23:5
+ 9 米蘭時間,【但 6/12 會自動扣款】。扣咗再退會蝕匯率
+ ,所以 6/11 前一定要取消。\n\n2. 威尼斯 Ca' Lucrezia 第一
+ 晚(6/16)—— 6/16 改咗住蘇黎世,威尼斯淨係住 6/17 一晚
+ 。免費取消到入住前 5 日(6/11)。\n\n⚠️ 前提:4–5 月 RF
+ I 確認咗修路日程冇改。如果直達車奇蹟返生,就反過嚟
+ 取消蘇黎世嗰晚。
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🔴 取消米蘭 HD8 6/16 + 威尼斯第一晚(6月11日前!
+ )
+TRIGGER:-P7D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🔴 取消米蘭 HD8 6/16 + 威尼斯第一晚(6月11日前!
+ )
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:🔴 取消米蘭 HD8 6/16 + 威尼斯第一晚(6月11日前!
+ )
+TRIGGER:-PT30M
 END:VALARM
 END:VEVENT
 END:VCALENDAR
